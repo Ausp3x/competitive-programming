@@ -14,24 +14,17 @@ using namespace __gnu_pbds;
 void solve() {
     int n;
     cin >> n;
-    vector<int> as(n);
-    for (int &a : as) {
-        cin >> a;
-    }
 
-    sort(as.begin(), as.end(), greater<int>());
-    
-    if (as[0] >= as[1] + as[2]) {
-        cout << "NO\n";
-        return;
+    cout << 3 * n + 4 << '\n';
+    cout << 0 << ' ' << 0 << '\n';
+    cout << 0 << ' ' << 1 << '\n';
+    for (int i = 1; i < n + 1; i++) {
+        cout << i << ' ' << i - 1 << '\n';
+        cout << i << ' ' << i << '\n';
+        cout << i << ' ' << i + 1 << '\n';
     }
-
-    swap(as[0], as[1]);
-    cout << "YES\n";
-    for (int &a : as) {
-        cout << a << ' '; 
-    }
-    cout << '\n';
+    cout << n + 1 << ' ' << n << '\n';
+    cout << n + 1 << ' ' << n + 1 << '\n';
 
     return;
 }
