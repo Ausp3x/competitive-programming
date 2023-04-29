@@ -12,44 +12,25 @@ using namespace __gnu_pbds;
 // #define DEBUG
 
 void solve() {
-    int n, m;
-    cin >> n >> m;
-    string s;
-    cin >> s;
-    
-    map<char, int> ltr_vals = {{'A', 1}, {'2', 2}, {'3', 3}, {'4', 4}, {'5', 5}, {'6', 6}, {'7', 7}, {'8', 8}, {'9', 9}, {'T', 10}, {'J', 10}, {'Q', 10}, {'K', 10}};
-    vector<char> val_ltrs = {'X', 'A', '2', '3', '4', '5', '6', '7', '8', '9', 'T'};
-    
-    int sum = 0;
-    vector<int> joker_idxs;
+    int n;
+    cin >> n;
+    map<int, int> a_cnts;
     for (int i = 0; i < n; i++) {
-        if (s[i] == '*') {
-            joker_idxs.push_back(i);
-        } else {
-            sum += ltr_vals[s[i]];
+        int a;
+        cin >> a;
+        a_cnts[a]++;
+    }
+
+    int thanked = 0;
+    for (auto &[k, v] : a_cnts) {
+        if (thanked < k) {
+            break;
         }
+        thanked += v;
     }
 
-    int len = joker_idxs.size();
-    if (sum + len > m) {
-        cout << "NO\n";
-        return;
-    }
+    cout << thanked << '\n';
     
-    if (sum + 10 * len < m) {
-        cout << "NO\n";
-        return;
-    }
-
-    m -= sum + len;
-    for (int &x : joker_idxs) {
-        int cur = min(m, 9);
-        s[x] = val_ltrs[cur + 1];
-        m -= cur;
-    }
-
-    cout << "YES\n" << s << '\n';
-
     return;
 }
 
