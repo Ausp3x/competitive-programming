@@ -12,19 +12,32 @@ using namespace __gnu_pbds;
 // #define DEBUG
 
 void solve() {
-    int n, k;
-    cin >> n >> k;
-    string s;
-    cin >> s;
+    int n;
+    cin >> n;
+    
+    if (n <= 3) {
+        cout << -1 << '\n';
+        return;
+    }
 
-    int cnt = 0;
-    for (int i = 1; i < n; i++) {
-        if (s[i] != s[i - 1]) {
-            cnt++;
+    deque<int> dq;
+    dq.push_back(3);
+    dq.push_back(1);
+    dq.push_back(4);
+    dq.push_back(2);
+    for (int i = 5; i <= n; i++) {
+        if (i % 2 == 0) {
+            dq.push_back(i);
+        } else {
+            dq.push_front(i);
         }
     }
-    
-    cout << n - max(cnt - 2 * k, 0) - 1 << '\n';
+
+    while (!dq.empty()) {
+        cout << dq.front() << ' ';
+        dq.pop_front();
+    }
+    cout << '\n';
 
     return;
 }
@@ -47,7 +60,7 @@ int main() {
 #endif
 
     int t = 1;
-    // cin >> t;
+    cin >> t;
     while (t--) {
         solve();
     }

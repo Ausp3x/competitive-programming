@@ -12,19 +12,38 @@ using namespace __gnu_pbds;
 // #define DEBUG
 
 void solve() {
-    int n, k;
-    cin >> n >> k;
-    string s;
-    cin >> s;
+    int a, b, c;
+    cin >> a >> b >> c;
 
-    int cnt = 0;
-    for (int i = 1; i < n; i++) {
-        if (s[i] != s[i - 1]) {
-            cnt++;
+    int ans = 0, cnt = a % 2 + b % 2 + c % 2; 
+    if (cnt == 1) {
+        ans++;
+        if (a % 2 == 0) {
+            a++;
+        }
+        if (b % 2 == 0) {
+            b++;
+        }
+        if (c % 2 == 0) {
+            c++;
         }
     }
+    if (cnt == 2) {
+        ans++;
+        if (a % 2 == 1) {
+            a++;
+        }
+        if (b % 2 == 1) {
+            b++;
+        }
+        if (c % 2 == 1) {
+            c++;
+        }
+    }
+    int abc_max = max({a, b, c});
+    ans += (abc_max - a) / 2 + (abc_max - b) / 2 + (abc_max - c) / 2;
     
-    cout << n - max(cnt - 2 * k, 0) - 1 << '\n';
+    cout << ans << '\n';
 
     return;
 }

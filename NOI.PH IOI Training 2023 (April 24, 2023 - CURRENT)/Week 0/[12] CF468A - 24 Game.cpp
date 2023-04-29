@@ -12,19 +12,33 @@ using namespace __gnu_pbds;
 // #define DEBUG
 
 void solve() {
-    int n, k;
-    cin >> n >> k;
-    string s;
-    cin >> s;
+    int n;
+    cin >> n;
 
-    int cnt = 0;
-    for (int i = 1; i < n; i++) {
-        if (s[i] != s[i - 1]) {
-            cnt++;
+    if (n <= 3) {
+        cout << "NO\n";
+        return;
+    }
+
+    cout << "YES\n";
+    if (n % 2 == 0) {
+        cout << "1 * 2 = 2\n";
+        cout << "2 * 3 = 6\n";
+        cout << "6 * 4 = 24\n";
+        for (int i = 5; i <= n; i += 2) {
+            cout << i + 1 << " - " << i << " = 1\n";
+            cout << "24 * 1 = 24\n";
+        }
+    } else {
+        cout << "4 - 2 = 2\n";
+        cout << "5 - 1 = 4\n"; 
+        cout << "2 * 3 = 6\n";
+        cout << "6 * 4 = 24\n"; 
+        for (int i = 6; i <= n; i += 2) {
+            cout << i + 1 << " - " << i << " = 1\n";
+            cout << "24 * 1 = 24\n";
         }
     }
-    
-    cout << n - max(cnt - 2 * k, 0) - 1 << '\n';
 
     return;
 }

@@ -12,19 +12,10 @@ using namespace __gnu_pbds;
 // #define DEBUG
 
 void solve() {
-    int n, k;
-    cin >> n >> k;
-    string s;
-    cin >> s;
+    int x1, y1, x2, y2;
+    cin >> x1 >> y1 >> x2 >> y2;
 
-    int cnt = 0;
-    for (int i = 1; i < n; i++) {
-        if (s[i] != s[i - 1]) {
-            cnt++;
-        }
-    }
-    
-    cout << n - max(cnt - 2 * k, 0) - 1 << '\n';
+    cout << 1ll * (x2 - x1) * (y2 - y1) + 1 << '\n'; 
 
     return;
 }
@@ -47,7 +38,7 @@ int main() {
 #endif
 
     int t = 1;
-    // cin >> t;
+    cin >> t;
     while (t--) {
         solve();
     }

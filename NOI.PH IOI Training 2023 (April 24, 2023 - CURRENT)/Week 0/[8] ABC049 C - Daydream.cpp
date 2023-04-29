@@ -12,19 +12,29 @@ using namespace __gnu_pbds;
 // #define DEBUG
 
 void solve() {
-    int n, k;
-    cin >> n >> k;
     string s;
     cin >> s;
 
-    int cnt = 0;
-    for (int i = 1; i < n; i++) {
-        if (s[i] != s[i - 1]) {
-            cnt++;
+    int n = s.size();
+    map<string, bool> str_chks = {{"dream", true}, {"dreamer", true}, {"erase", true}, {"eraser", true}};
+    for (int i = n - 1; i >= 0; ) {
+        if (s.substr(i - 4, 5) == "dream" || s.substr(i - 4, 5) == "erase") {
+            i -= 5;
+            continue;
         }
+        if (s.substr(i - 5, 6) == "eraser") {
+            i -= 6;
+            continue;
+        }
+        if (s.substr(i - 6, 7) == "dreamer") {
+            i -= 7;
+            continue;
+        }
+        cout << "NO\n";
+        return;
     }
-    
-    cout << n - max(cnt - 2 * k, 0) - 1 << '\n';
+
+    cout << "YES\n";
 
     return;
 }
