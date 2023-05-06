@@ -13,24 +13,21 @@ using namespace __gnu_pbds;
 // #define DEBUG
 
 void solve() {
-    int n;
-    cin >> n;
-    vector<int> as(n);
-    for (int &a : as) {
-        cin >> a;
+    string s;
+    cin >> s;
+
+    int n = s.size();
+    vector<int> a_cnts(n + 1), b_cnts(n + 1);
+    for (int i = 1; i <= n; i++) {
+        a_cnts[i] += a_cnts[i - 1] + (s[i - 1] == 'a');
+        b_cnts[i] += b_cnts[i - 1] + (s[i - 1] == 'b');
     }
 
-    sort(as.begin(), as.end(), greater<int>());
-
-    vector<lng> a_rprfs(n);
-    a_rprfs[n - 1] = as[n - 1];
-    for (int i = n - 2; i >= 0; i--) {
-        a_rprfs[i] += a_rprfs[i + 1] + as[i];
-    }
-    
-    lng ans = 0;
-    for (int i = 0; i < n - 1; i++) {
-        ans += 1ll * (n - i - 1) * as[i] - a_rprfs[i + 1]; 
+    int ans = 0;
+    for (int i = 0; i <= n; i++) {
+        for (int j = i; j <= n; j++) {
+            ans = max({ans, a_cnts[i] + b_cnts[j] - b_cnts[i] + a_cnts[n] - a_cnts[j]});
+        }
     }
 
     cout << ans << '\n';

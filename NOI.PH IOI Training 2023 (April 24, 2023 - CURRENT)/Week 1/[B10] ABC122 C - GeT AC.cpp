@@ -13,27 +13,42 @@ using namespace __gnu_pbds;
 // #define DEBUG
 
 void solve() {
-    int n;
-    cin >> n;
-    vector<int> as(n);
-    for (int &a : as) {
-        cin >> a;
-    }
-
-    sort(as.begin(), as.end(), greater<int>());
-
-    vector<lng> a_rprfs(n);
-    a_rprfs[n - 1] = as[n - 1];
-    for (int i = n - 2; i >= 0; i--) {
-        a_rprfs[i] += a_rprfs[i + 1] + as[i];
-    }
+    int n, q;
+    cin >> n >> q;
+    string s;
+    cin >> s;
     
-    lng ans = 0;
+    vector<int> ac_idxs;
     for (int i = 0; i < n - 1; i++) {
-        ans += 1ll * (n - i - 1) * as[i] - a_rprfs[i + 1]; 
+        if (s.substr(i, 2) == "AC") {
+            ac_idxs.push_back(i);
+        }
     }
+    ac_idxs.push_back(1e9); // insert "infinity"
 
-    cout << ans << '\n';
+    while (q--) {
+        int l, r;
+        cin >> l >> r;
+        l--; r--;
+        
+        if (ac_idxs.empty()) {
+            cout << 0 << '\n';
+            continue;
+        }
+
+        int l_idx = lower_bound(ac_idxs.begin(), ac_idxs.end(), l) - ac_idxs.begin(),
+            r_idx = lower_bound(ac_idxs.begin(), ac_idxs.end(), r) - ac_idxs.begin();
+        
+        if (ac_idxs[l_idx] >= r) {
+            cout << 0 << '\n';
+            continue;
+        }
+
+        if (ac_idxs[r_idx] >= r) {
+            r_idx--;
+        }
+        cout << r_idx - l_idx + 1 << '\n';
+    }
 
     return;
 }

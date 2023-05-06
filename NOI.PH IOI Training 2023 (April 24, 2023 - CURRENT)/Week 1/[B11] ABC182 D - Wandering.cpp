@@ -15,22 +15,22 @@ using namespace __gnu_pbds;
 void solve() {
     int n;
     cin >> n;
-    vector<int> as(n);
-    for (int &a : as) {
+    vector<lng> a_prfs(n);
+    for (lng &a : a_prfs) {
         cin >> a;
     }
 
-    sort(as.begin(), as.end(), greater<int>());
-
-    vector<lng> a_rprfs(n);
-    a_rprfs[n - 1] = as[n - 1];
-    for (int i = n - 2; i >= 0; i--) {
-        a_rprfs[i] += a_rprfs[i + 1] + as[i];
+    vector<lng> a_prf_maxs(n);
+    a_prf_maxs[0] = a_prfs[0];
+    for (int i = 1; i < n; i++) {
+        a_prfs[i] += a_prfs[i - 1];
+        a_prf_maxs[i] = max(a_prfs[i], a_prf_maxs[i - 1]);
     }
-    
-    lng ans = 0;
-    for (int i = 0; i < n - 1; i++) {
-        ans += 1ll * (n - i - 1) * as[i] - a_rprfs[i + 1]; 
+
+    lng ans = 0, cur = 0;
+    for (int i = 0; i < n; i++) {
+        ans = max(ans, cur + a_prf_maxs[i]);
+        cur += a_prfs[i];
     }
 
     cout << ans << '\n';

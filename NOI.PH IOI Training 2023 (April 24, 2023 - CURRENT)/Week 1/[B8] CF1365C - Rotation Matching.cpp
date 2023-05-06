@@ -13,26 +13,25 @@ using namespace __gnu_pbds;
 // #define DEBUG
 
 void solve() {
-    int n;
+    int n;  
     cin >> n;
-    vector<int> as(n);
-    for (int &a : as) {
+    map<int, int> a_idxs;
+    for (int i = 0; i < n; i++) {
+        int a;
         cin >> a;
+        a_idxs[a] = i;
     }
-
-    sort(as.begin(), as.end(), greater<int>());
-
-    vector<lng> a_rprfs(n);
-    a_rprfs[n - 1] = as[n - 1];
-    for (int i = n - 2; i >= 0; i--) {
-        a_rprfs[i] += a_rprfs[i + 1] + as[i];
+    map<int, int> distance_cnts;
+    for (int i = 0; i < n; i++) {
+        int b;
+        cin >> b;
+        distance_cnts[(i - a_idxs[b] + n) % n]++;
     }
     
-    lng ans = 0;
-    for (int i = 0; i < n - 1; i++) {
-        ans += 1ll * (n - i - 1) * as[i] - a_rprfs[i + 1]; 
+    int ans = 0;
+    for (auto &[k, v] : distance_cnts) {
+        ans = max(ans, v);
     }
-
     cout << ans << '\n';
 
     return;

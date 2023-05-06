@@ -12,28 +12,39 @@ using namespace __gnu_pbds;
 // #define ONLINE_JUDGE
 // #define DEBUG
 
+int gcd(int x, int y) {
+    return (y == 0 ? x : gcd(y, x % y));
+}
+
+lng lcm(int x, int y) {
+    return 1ll * x * y / gcd(x, y);
+}
+
 void solve() {
     int n;
     cin >> n;
-    vector<int> as(n);
-    for (int &a : as) {
+    int a_max = 0;
+    map<int, int> a_idxs;
+    for (int i = 1; i <= n; i++) {
+        int a;
         cin >> a;
+        a_max = max(a_max, a);
+        if (!a_idxs.contains(a)) {
+            a_idxs[a] = i;
+        }
     }
 
-    sort(as.begin(), as.end(), greater<int>());
-
-    vector<lng> a_rprfs(n);
-    a_rprfs[n - 1] = as[n - 1];
-    for (int i = n - 2; i >= 0; i--) {
-        a_rprfs[i] += a_rprfs[i + 1] + as[i];
-    }
-    
-    lng ans = 0;
-    for (int i = 0; i < n - 1; i++) {
-        ans += 1ll * (n - i - 1) * as[i] - a_rprfs[i + 1]; 
+    lng a_dom = 1;
+    for (auto &[a, idx] : a_idxs) {
+        a_dom = lcm(a_dom, a);
+        
+        if (a_dom > a_max) {
+            cout << -1 << '\n';
+            return;
+        }
     }
 
-    cout << ans << '\n';
+    cout << (a_idxs[a_dom] ? a_idxs[a_dom] : -1) << '\n';
 
     return;
 }
