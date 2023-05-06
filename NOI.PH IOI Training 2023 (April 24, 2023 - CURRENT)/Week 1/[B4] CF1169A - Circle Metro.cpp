@@ -13,21 +13,21 @@ using namespace __gnu_pbds;
 // #define DEBUG
 
 void solve() {
-    int x, y;
-    cin >> x >> y;
-     
-    if (y % 2 != 0) {
-        cout << "No\n";
-        return;
+    int n, a, x, b, y;
+    cin >> n >> a >> x >> b >> y;
+
+    a--; x--; b--; y--;
+    while (a != x && b != y) {
+        if (a == b) {
+            cout << "YES\n";
+            return;
+        }
+        a = (a + 1) % n;
+        b = (b + n - 1) % n;
     }
 
-    if (y < 2 * x || y > 4 * x) {
-        cout << "No\n";
-        return;
-    }
-
-    cout << "Yes\n";
-
+    cout << (a == b ? "YES\n" : "NO\n");
+    
     return;
 }
 

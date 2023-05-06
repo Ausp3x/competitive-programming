@@ -13,20 +13,29 @@ using namespace __gnu_pbds;
 // #define DEBUG
 
 void solve() {
-    int x, y;
-    cin >> x >> y;
-     
-    if (y % 2 != 0) {
-        cout << "No\n";
-        return;
+    int k, s;
+    cin >> k >> s;
+
+    int ans = 0;
+    for (int i = k; i >= 0; i--) {
+        if (s - i < 0) {
+            continue;
+        }
+        if (s - i > 2 * k) {
+            break;
+        }
+        for (int j = k; j >= 0; j--) {
+            if (s - i - j < 0) {
+                continue;
+            }
+            if (s - i - j > k) {
+                break;
+            }
+            ans++;
+        }
     }
 
-    if (y < 2 * x || y > 4 * x) {
-        cout << "No\n";
-        return;
-    }
-
-    cout << "Yes\n";
+    cout << ans << '\n';
 
     return;
 }

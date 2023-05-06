@@ -13,20 +13,33 @@ using namespace __gnu_pbds;
 // #define DEBUG
 
 void solve() {
-    int x, y;
-    cin >> x >> y;
-     
-    if (y % 2 != 0) {
-        cout << "No\n";
-        return;
+    int n;
+    cin >> n;
+    string events;
+    cin >> events;
+    
+    string room_assignments(10, '0');
+    for (char x : events) {
+        if (x == 'L') {
+            for (int i = 0; i < 10; i++) {
+                if (room_assignments[i] == '0') {
+                    room_assignments[i] = '1';
+                    break;
+                }
+            }
+        } else if (x == 'R') {
+            for (int i = 9; i >= 0; i--) {
+                if (room_assignments[i] == '0') {
+                    room_assignments[i] = '1';
+                    break;
+                }
+            }
+        } else {
+            room_assignments[x - '0'] = '0';
+        }
     }
 
-    if (y < 2 * x || y > 4 * x) {
-        cout << "No\n";
-        return;
-    }
-
-    cout << "Yes\n";
+    cout << room_assignments << '\n';
 
     return;
 }
