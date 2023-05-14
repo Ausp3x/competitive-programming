@@ -16,8 +16,9 @@ void solve() {
     int n;
     cin >> n;
 
+    int q = 10, sum = 0;
     map<string, pair<int, int>> compound_idxRanges;
-    for (int i = 10; i > 0; i--) {
+    for (int i = q; i > 0; i--) {
         vector<int> idxs;
         for (int j = 0; j < n; j++) {
             if (j % (1 << i) < (1 << i - 1)) {
@@ -34,17 +35,17 @@ void solve() {
         cout << endl;
 
         map<string, bool> compound_chks;
-        for (int j = 1; j <= len; j++) {
+        while (len--) {
             string x;
             cin >> x;            
             
             if (!compound_idxRanges.contains(x)) {
-                compound_idxRanges[x] = {0, n - 1};
+                compound_idxRanges[x] = {sum, 1 << q};
             }
 
             compound_chks[x] = true;
             auto [a, b] = compound_idxRanges[x];
-            compound_idxRanges[x] = {a, min(a + (1 << i - 1) - 1, b)};
+            compound_idxRanges[x] = {a, a + (1 << i - 1) - 1};
         }
 
         for (auto &[x, y] : compound_idxRanges) {
@@ -53,15 +54,10 @@ void solve() {
             }
             
             auto [a, b] = y;
-            y = {min(a + (1 << i - 1), b), b};
+            y = {a + (1 << i - 1), b};
         }
 
-        // cout << "\n/////////////////\n";
-        // cout << (1 << i) << '\n';
-        // for (auto &[x, y] : compound_idxRanges) {
-        //     cout << x << ' ' << y.first << ' ' << y.second << '\n';
-        // }
-        // cout << "/////////////////\n\n";
+        sum += 1 << i - 1;
     }
 
     vector<string> ans(n);
