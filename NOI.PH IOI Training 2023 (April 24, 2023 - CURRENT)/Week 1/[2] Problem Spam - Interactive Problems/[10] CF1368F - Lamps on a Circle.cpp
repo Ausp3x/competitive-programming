@@ -22,16 +22,21 @@ void solve() {
     }
 
     // 0 off, 1 on
+    int k = sqrt(n);
     vector<bool> states(n + 1);
     while (true) {
         vector<int> idxs;
-        for (int i = 1; i <= n - 1; i += 2) {
+        for (int i = 1; i <= n - 1 && idxs.size() < k; i++) {
+            if (i % k == 0) {
+                continue;
+            }
+
             if (states[i] == 0) {
                 idxs.push_back(i);
             }
         }
 
-        if (idxs.size() == 1) {
+        if (idxs.size() < k) {
             cout << 0 << endl;
             return;
         }
@@ -49,7 +54,6 @@ void solve() {
             states[((i - 1) % n + n) % n + 1] = 0;
         }
     }
-
     
     return;
 }
