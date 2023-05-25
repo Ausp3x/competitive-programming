@@ -1,0 +1,16 @@
+N = 1000000
+
+is_prime = [True for i in range(N + 1)]
+
+p = 2
+while (p * p <= N):
+    if is_prime[p]:
+        for i in range(p * p, N + 1, p):
+            is_prime[i] = False
+    p += 1
+
+with open('output.txt', 'a') as file:
+    for p in range(2, N + 1):
+        if is_prime[p]:
+            file.write(str(p))
+            file.write(", ")
