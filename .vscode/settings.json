@@ -86,5 +86,7 @@
         "typeinfo": "cpp",
         "valarray": "cpp",
         "variant": "cpp"
-    }
+    },
+    "editor.fontFamily": "'Victor Mono', 'Courier New', monospace",
+    "C_Cpp.default.compilerPath": ""
 }
