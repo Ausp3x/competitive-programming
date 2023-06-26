@@ -12,7 +12,8 @@
             ],
             "intelliSenseMode": "${default}",
             "compilerPath": "C:/ProgramData/chocolatey/bin/g++.exe",
-            "cppStandard": "c++20"
+            "cppStandard": "c++20",
+            "cStandard": "c17"
         }
     ],
     "version": 4

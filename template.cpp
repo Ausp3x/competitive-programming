@@ -9,8 +9,7 @@ typedef unsigned long long    ulng;
 using namespace std;
 using namespace __gnu_pbds;
 
-// #define ONLINE_JUDGE
-// #define DEBUG
+// #define TROUBLESHOOT
 
 void solve() {
     
@@ -21,16 +20,11 @@ int main() {
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
 
-#ifndef ONLINE_JUDGE
-    freopen("input.txt", "r", stdin);
-    freopen("output.txt", "w", stdout);
-#endif
-
-#ifdef DEBUG
+#ifdef TROUBLESHOOT
     auto start = chrono::high_resolution_clock::now();
 #endif
 
-#ifdef DEBUG
+#ifdef TROUBLESHOOT
     // testing code
 #endif
 
@@ -40,7 +34,7 @@ int main() {
         solve();
     }
 
-#ifdef DEBUG
+#ifdef TROUBLESHOOT
     auto stop = chrono::high_resolution_clock::now();
     auto duration = chrono::duration_cast<chrono::microseconds>(stop - start);
     cout << duration.count() << " microseconds\n";
