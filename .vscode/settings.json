@@ -87,6 +87,6 @@
         "valarray": "cpp",
         "variant": "cpp"
     },
-    "editor.fontFamily": "'Victor Mono', 'Courier New', monospace",
+    "editor.fontFamily": "'Fira Code'",
     "C_Cpp.default.compilerPath": ""
 }
