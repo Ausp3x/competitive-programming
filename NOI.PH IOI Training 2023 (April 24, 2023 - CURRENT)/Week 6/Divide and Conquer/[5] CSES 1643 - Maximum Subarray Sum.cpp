@@ -11,19 +11,25 @@ using namespace __gnu_pbds;
 
 // #define TROUBLESHOOT
 
-void solve() {
-    queue<int> q;
-    q.push(0);
-    while (!q.empty()) {
-        int cur = q.front();
-        q.pop();
-
-        cout << cur << endl;
-
-        for (int i = 32 - __builtin_clz(cur); i < 16; i++) {
-            q.push(cur | (1 << i));
-        }
+lng kadane(vector<int> &arr) {
+    lng max_sum = -(1ll << 60), cur_sum = -(1ll << 60);
+    for (int a : arr) {
+        cur_sum = max(cur_sum + a, lng(a));
+        max_sum = max(max_sum, cur_sum);
     }
+
+    return max_sum;
+}
+
+void solve() {
+    int n;
+    cin >> n;
+    vector<int> as(n);
+    for (int &a : as) {
+        cin >> a;
+    }
+
+    cout << kadane(as) << endl;
 
     return;
 }

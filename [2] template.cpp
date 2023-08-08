@@ -1,8 +1,16 @@
+// 人外有人，天外有天
+// author: Ausp3x
+
 #include <bits/stdc++.h>
+#include <ext/pb_ds/assoc_container.hpp>
 typedef long long             lng;
 typedef unsigned int          uint;
 typedef unsigned long long    ulng;
 using namespace std;
+using namespace __gnu_pbds;
+
+int const INF32 = 1 << 30;
+lng const INF64 = 1ll << 60;
 
 void solve() {
     

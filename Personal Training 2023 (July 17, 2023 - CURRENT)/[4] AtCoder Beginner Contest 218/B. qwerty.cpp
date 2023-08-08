@@ -12,6 +12,13 @@ using namespace __gnu_pbds;
 // #define TROUBLESHOOT
 
 void solve() {
+    for (int i = 0; i < 26; i++) {
+        int p;
+        cin >> p;
+
+        cout << char('a' + p - 1);
+    }
+    cout << endl;
     
     return;
 }
@@ -29,7 +36,7 @@ int main() {
 #endif
 
     int t = 1;
-    cin >> t;
+    // cin >> t;
     while (t--) {
         solve();
     }
