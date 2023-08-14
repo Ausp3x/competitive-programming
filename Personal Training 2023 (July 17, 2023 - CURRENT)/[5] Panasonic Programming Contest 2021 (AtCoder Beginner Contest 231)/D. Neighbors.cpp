@@ -1,3 +1,6 @@
+// 人外有人，天外有天
+// author: Ausp3x
+
 #include <bits/stdc++.h>
 #include <ext/pb_ds/assoc_container.hpp>
 typedef long long             lng;
@@ -8,46 +11,6 @@ using namespace __gnu_pbds;
 
 int const INF32 = 1 << 30;
 lng const INF64 = 1ll << 60;
-
-lng dijkstra(int a, int b, int n, vector<vector<pair<int, int>>> &adjl) {
-    vector<bool> is_processed(n + 1);
-    vector<lng> dis(n + 1, INF64);
-    priority_queue<pair<lng, int>, vector<pair<lng, int>>, greater<pair<lng, int>>> unprocessed;
-
-    dis[a] = 0;
-    unprocessed.push({dis[a], a});
-
-    while (!unprocessed.empty()) {
-        int cur = unprocessed.top().second;
-        unprocessed.pop();
-
-        if (is_processed[cur]) {
-            continue;
-        }
-
-        is_processed[cur] = true;
-
-        for (auto &[nxt, w] : adjl[cur]) {
-            if (dis[cur] + w < dis[nxt]) {
-                dis[nxt] = dis[cur] + w;
-                unprocessed.push({dis[nxt], nxt});
-            }
-        }
-    }
-
-    return dis[b];
-}
-
-lng kadane(vector<int> &arr) {
-    lng max_sum = -INF64, cur_sum = -INF64;
-
-    for (int a : arr) {
-        cur_sum = max(cur_sum + a, lng(a));
-        max_sum = max(max_sum, cur_sum);
-    }
-
-    return max_sum;
-}
 
 struct UnionFind {
     int n;
@@ -87,3 +50,47 @@ struct UnionFind {
         return;
     }
 };
+
+void solve() {
+    int n, m;
+    cin >> n >> m;
+    vector<vector<int>> adjl(n + 1);
+    UnionFind u(n + 1);
+    while (m--) {
+        int a, b;
+        cin >> a >> b;
+        adjl[a].push_back(b);
+        adjl[b].push_back(a);
+
+        if (adjl[a].size() > 2 || adjl[b].size() > 2) {
+            cout << "No" << endl;
+
+            return;
+        }
+
+        if (u.sameSet(a, b)) {
+            cout << "No" << endl;
+
+            return;
+        } 
+
+        u.uniteSets(a, b);
+    }
+
+    cout << "Yes" << endl;
+    
+    return;
+}
+
+int main() {
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+
+    int t = 1;
+    // cin >> t;
+    while (t--) {
+        solve();
+    }
+
+    return 0;
+}
