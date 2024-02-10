@@ -1,3 +1,6 @@
+// 人外有人，天外有天
+// author: Ausp3x
+
 #include <bits/stdc++.h>
 #include <ext/pb_ds/assoc_container.hpp>
 typedef long long             lng;
@@ -6,17 +9,16 @@ typedef unsigned long long    ulng;
 using namespace std;
 using namespace __gnu_pbds;
 
-int const INF32 = 1 << 30;
-lng const INF64 = 1ll << 60;
+int const INF32 = 0x3f3f3f3f;
+lng const INF64 = 0x3f3f3f3f3f3f3f3f;
 
-lng dijkstra(int a, int b, int n, vector<vector<pair<int, int>>> &adjl) {
+lng dijkstra(int u, int v, int n, vector<vector<pair<int, int>>> &adjl) {
     vector<bool> is_processed(n + 1);
     vector<lng> dis(n + 1, INF64);
     priority_queue<pair<lng, int>, vector<pair<lng, int>>, greater<pair<lng, int>>> unprocessed;
 
-    dis[a] = 0;
-    unprocessed.push({dis[a], a});
-
+    dis[u] = 0;
+    unprocessed.push({dis[u], u});
     while (!unprocessed.empty()) {
         int cur = unprocessed.top().second;
         unprocessed.pop();
@@ -24,7 +26,6 @@ lng dijkstra(int a, int b, int n, vector<vector<pair<int, int>>> &adjl) {
         if (is_processed[cur]) {
             continue;
         }
-
         is_processed[cur] = true;
 
         for (auto &[nxt, w] : adjl[cur]) {
@@ -35,7 +36,7 @@ lng dijkstra(int a, int b, int n, vector<vector<pair<int, int>>> &adjl) {
         }
     }
 
-    return dis[b];
+    return dis[v];
 }
 
 lng kadane(vector<int> &arr) {
@@ -47,6 +48,23 @@ lng kadane(vector<int> &arr) {
     }
 
     return max_sum;
+}
+
+int modPow(lng x, int y, int MOD) {
+    lng res = 1;
+
+    while (y > 0) {
+        if (y & 1) {
+            res *= x;
+            res %= MOD;
+        }
+
+        y >>= 1;
+        x *= x;
+        x %= MOD;
+    }
+
+    return (res + MOD) % MOD;
 }
 
 struct UnionFind {

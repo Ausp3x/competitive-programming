@@ -9,11 +9,22 @@ typedef unsigned long long    ulng;
 using namespace std;
 using namespace __gnu_pbds;
 
-int const INF32 = 1 << 30;
-lng const INF64 = 1ll << 60;
+int const INF32 = 0x3f3f3f3f;
+lng const INF64 = 0x3f3f3f3f3f3f3f3f;
 
 void solve() {
-    
+    int n;
+    cin >> n;
+    int k = INF32;
+    while (n--) {
+        int d, s;
+        cin >> d >> s;
+
+        k = min(k, d + (s - 1) / 2);
+    }
+
+    cout << k << endl;
+
     return;
 }
 

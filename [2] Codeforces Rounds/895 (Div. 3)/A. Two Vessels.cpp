@@ -13,7 +13,15 @@ int const INF32 = 0x3f3f3f3f;
 lng const INF64 = 0x3f3f3f3f3f3f3f3f;
 
 void solve() {
-    
+    int a, b, c;
+    cin >> a >> b >> c;
+
+    if (b > a) {
+        swap(a, b);
+    }
+
+    cout << ((a - b + 1) / 2 + c - 1) / c << endl;
+
     return;
 }
 

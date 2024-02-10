@@ -13,7 +13,20 @@ int const INF32 = 0x3f3f3f3f;
 lng const INF64 = 0x3f3f3f3f3f3f3f3f;
 
 void solve() {
-    
+    lng n, x, y;
+    cin >> n >> x >> y;
+
+    if (x == y) {
+        cout << 0 << endl;
+        return;
+    }
+
+    lng lcm = x * y / __gcd(x, y);
+    lng n_x = n / x - n / lcm;
+    lng n_y = n / y - n / lcm;
+
+    cout << (2 * n - n_x + 1) * n_x / 2 - (n_y + 1) * n_y / 2 << endl;
+
     return;
 }
 

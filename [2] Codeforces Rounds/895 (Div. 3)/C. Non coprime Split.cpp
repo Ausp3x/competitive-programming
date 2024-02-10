@@ -13,6 +13,19 @@ int const INF32 = 0x3f3f3f3f;
 lng const INF64 = 0x3f3f3f3f3f3f3f3f;
 
 void solve() {
+    int l, r;
+    cin >> l >> r;
+
+    for (int i = l; i <= r; i++) {
+        for (int j = 2; j * j <= i; j++) {
+            if (i % j == 0 && min(j, i - j) > 0) {
+                cout << j << ' ' << i - j << endl;
+                return;
+            }
+        }
+    }
+
+    cout << -1 << endl;
     
     return;
 }

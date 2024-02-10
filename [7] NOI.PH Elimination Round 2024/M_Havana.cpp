@@ -13,6 +13,23 @@ int const INF32 = 0x3f3f3f3f;
 lng const INF64 = 0x3f3f3f3f3f3f3f3f;
 
 void solve() {
+    int m;
+    cin >> m;
+    stack<int> A;
+    for (int i = 0; i < m; i++) {
+        int a;
+        cin >> a;
+        A.push(a);
+    }
+    int n;
+    cin >> n;
+    stack<int> B;
+    for (int i = 0; i < n; i++) {
+        int b;
+        cin >> b;
+        B.push(b);
+    }
+    
     
     return;
 }
