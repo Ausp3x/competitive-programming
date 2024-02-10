@@ -569,7 +569,44 @@ def getEquatorialConjunction(ecl):
 
 
 ####################################################################################################
+def getRisingAndSettingCurves(𝜏):
+    t = T_i + ΔT
+    ts, λs, ϕs = [], [], []
+    while t <= T_f + ΔT:
+        x = getMB('x', t)
+        y = getMB('y', t)
+        l_1 = getMB('l_1', t)
+        ρ_1 = getAB('ρ_1', t)
+        m = sqrt(x**2 + y**2)
+        M = 2 * atan(x / (y + m))
 
+        for i in range(2):
+            ρ = 1
+            cnt = 5
+            for j in range(cnt):
+                A = 2 * asin(sqrt((l_1 + m - ρ) * (l_1 - m + ρ) / (4 * m * ρ)))
+                γ = M + pow(-1, i) * A
+                
+                if γ.imag != 0:
+                    break
+
+                ξ = ρ * sin(γ)
+                η_1 = ρ * cos(γ) / ρ_1
+                γ2 = 2 * atan(ξ / (η_1 + sqrt(ξ**2 + η_1**2)))
+                ρ = sin(γ2) / sin(γ)
+
+                if j == cnt - 1:
+                    if cos(M - γ) < 0:
+                        continue
+
+                    λ, ϕ = getLongitudeAndLatitude(t, sin(γ2), cos(γ2), 0)
+                    ts.append(t)
+                    λs.append(λ)
+                    ϕs.append(ϕ)
+
+        t += 𝜏
+    
+    return ['Rising and Setting Curves', ts, λs, ϕs]
 ####################################################################################################
 
 
