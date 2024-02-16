@@ -1,7 +1,7 @@
 from mpmath import *
 mp.dps = 100
 
-# Partial Solar Eclipse of 2022 April 30
+name = 'Partial Solar Eclipse of 2022 April 30'
 TDT, ΔT = mpf('21'), mpf('70.7') / mpf('3600')
 T_i, T_f = mpf('-5'), mpf('5')
 B = {
@@ -15,7 +15,7 @@ B = {
      'tanf_2': [mpf('0.0046189')],
     }
 
-# Annular Solar Eclipse of 2023 October 14
+name = 'Annular Solar Eclipse of 2023 October 14'
 TDT, ΔT = mpf('18'), mpf('71.3') / mpf('3600')
 T_i, T_f = mpf('-5'), mpf('5')
 B = {
@@ -29,7 +29,7 @@ B = {
      'tanf_2': [mpf('0.0046648')],
     }
 
-# Hybrid Solar Eclipse of 2023 April 20
+name = 'Hybrid Solar Eclipse of 2023 April 20'
 TDT, ΔT = mpf('4'), mpf('71.1') / mpf('3600')
 T_i, T_f = mpf('-5'), mpf('5')
 B = {
@@ -43,7 +43,7 @@ B = {
      'tanf_2': [mpf('0.0046318')],
     }
 
-# Total Solar Eclipse of 2019 July 02
+name = 'Total Solar Eclipse of 2019 July 02'
 TDT, ΔT = mpf('19'), mpf('69.6') / mpf('3600')
 T_i, T_f = mpf('-5'), mpf('5')
 B = {
@@ -57,7 +57,7 @@ B = {
      'tanf_2': [mpf('0.0045755')],
     }
 
-# Total Solar Eclipse of 2024 April 08
+name = 'Total Solar Eclipse of 2024 April 08'
 TDT, ΔT = mpf('18'), mpf('715/36000')
 T_i, T_f = mpf('-5'), mpf('5')
 B = {
@@ -69,4 +69,18 @@ B = {
      'l_2':    [mpf('-0.01027'), mpf('0.00006'), mpf('-0.00001')],
      'tanf_1': [mpf('0.0046683')],
      'tanf_2': [mpf('0.0046450')],
+    }
+
+name = 'Total Solar Eclipse of 2186 July 16'
+TDT, ΔT = mpf('15'), mpf('2463/36000')
+T_i, T_f = mpf('-5'), mpf('5')
+B = {
+     'x':      [mpf('-0.16352'), mpf('0.58248'),  mpf('-0.00000'), mpf('-0.00001')],
+     'y':      [mpf('-0.22748'), mpf('-0.04591'), mpf('-0.00014'), mpf('0.00000')],
+     'd':      [mpf('21.2111'),  mpf('-0.0069'),  mpf('-0.0000')],
+     'μ':      [mpf('43.3728'),  mpf('15.0006'),  mpf('0.0000')],
+     'l_1':    [mpf('0.53019'),  mpf('0.00001'),  mpf('-0.00001')],
+     'l_2':    [mpf('-0.01589'), mpf('0.00001'),  mpf('-0.00001')],
+     'tanf_1': [mpf('0.0045992')],
+     'tanf_2': [mpf('0.0045763')],
     }
