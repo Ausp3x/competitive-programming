@@ -14,6 +14,7 @@ lng const INF64 = 0x3f3f3f3f3f3f3f3f;
 
 void solve() {
     
+    
     return;
 }
 
