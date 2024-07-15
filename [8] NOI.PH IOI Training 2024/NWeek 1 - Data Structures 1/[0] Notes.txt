@@ -1,0 +1,121 @@
+1.A1: IOI 2015/4 (Horses)
+sort of optimization problem
+array processing problem
+array updating, basic optimization
+
+////////////////////////////// CORE IDEA //////////////////////////////
+we want to find the first day i such that
+y[i] > x[i + 1] * x[i + 2] * ... * x[n - 1] * y[n - 1]
+if no such i exists, then i is n - 1
+
+comparison between opportunity of days i, j:
+y[i] > x[i + 1] * x[i + 2] * ... * x[j] * y[j]
+///////////////////////////////////////////////////////////////////////
+
+
+
+1.A2: IOI 2012/3 (Crayfish Scrivener)
+data structures problem
+string queries
+handling trie structures
+
+////////////////////////////// CORE IDEA //////////////////////////////
+use tries to store word history
+use a vector of pointers to nodes of the trie to handle undo queries
+///////////////////////////////////////////////////////////////////////
+
+
+
+1.A3: CF 1837F (Editorial for Two)
+framed as optimization
+more insights
+optimization not the main idea
+optimization idea -> process array (hard part)
+nice problem
+easy/easy medium
+there exists a rather uncommon solution
+
+////////////////////////////// CORE IDEA //////////////////////////////
+binary search over possible sum values
+for each searched item, use priority queues to determine the most no.
+of elements that give a sum <= the current sum value for n prefixes and 
+suffixes
+for each pair, check if the precomputed prefix and suffix counts result
+in a value >= k
+///////////////////////////////////////////////////////////////////////
+
+
+
+1.B1: IOI 2014/2 (Wall)
+range updates problems (lazy propagation)
+some kind of range update
+SEGMENT TREES (NON-STANDARD!!!!)
+- make an insight that simplifies process
+does not need extremely deep insight on segment trees
+pure segtree update problem
+
+////////////////////////////// CORE IDEA //////////////////////////////
+add over range and remove over range can be simplified to max over
+range and min over range, respectively
+
+a sequence of max and min operations can be simplified to a range of
+actual values that, starting with (-inf, inf), you either apply max or
+min to both over each operation to get the range of possible values
+since the updates are always integers, the actual possible values are
+just those two integers l and r in the resulting range (l, r)
+
+use casework to reconcile two "update" ranges
+
+use lazyprop segtree to update over a range and query individual values
+in logarithmic time
+///////////////////////////////////////////////////////////////////////
+
+
+
+1.B2: IOI 2013/5 (Robots)
+array processing problem
+4 arrays of data, 2 objectives to consider and balance
+pretty instructive
+Subtask 1: 
+- understanding check
+Subtask 2: 
+- insight
+- nontrivial special case
+Subtask 3: 
+- O(quartic/any polynomial solution) can be made to fit 
+- any dumb way to optimize to polynomial
+- probably dp
+Subtask 4: 
+- O(quadratic/log quadratic) in T, A, B 
+Subtask 5:
+- O(log n/T + A + B)
+- not allowed to multiply T by anything larger than logA, logB
+
+////////////////////////////// CORE IDEA //////////////////////////////
+subtask 1 - brute force
+subtask 2 - binary search
+subtask 5 - 
+sort toys by lightest to heaviest
+weak robots ascending strength, take largest toys possible
+place all remaining toys in the priority queue
+small robots descending size, take largest toys possible
+///////////////////////////////////////////////////////////////////////
+
+
+
+1.C1: Algolympics 2017 Expando
+no insights
+it's very clearly lazy segtree
+skill check on lazy segtree
+NON-STANDARD range query
+If there were no range queries, if all updates/queries happened to all elements at once, would you be able to solve it?
+pointer-based segtree instead of array-based (research)
+
+
+
+1.C2: IOI 2021/1 Distributing Candies
+another strange update problem
+continuation of Wall somewhat
+"your ability to answer them offline": difference tables vs. segtree
+- offline: only need to give the final answer, resolve queries in any order that's convenient
+- online: queries need to be answered in order

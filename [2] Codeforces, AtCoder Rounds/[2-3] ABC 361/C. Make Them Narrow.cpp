@@ -11,17 +11,35 @@ using namespace __gnu_pbds;
 #define se second
 #define pb push_back
 // #define DEBUG
-typedef long long             lng;
-typedef pair<int, int>        pi;
-typedef vector<int>           vi;
-typedef pair<lng, lng>        pl;
-typedef vector<lng, lng>      vl;
+typedef long long    lng;
 
 int const INF32 = 0x3f3f3f3f;
 lng const INF64 = 0x3f3f3f3f3f3f3f3f;
 
 void solve(int t) {
+    int N, K;
+    cin >> N >> K;
+    vector<int> A(N);
+    for (int &a : A)
+        cin >> a;
+
+    if (N == 2) {
+        cout << 0 << endl;
+        return;
+    }
+
+    sort(A.begin(), A.end());
+
+    // for (int a : A)
+    //     cout << a << ' ';
+    // cout << endl;
+
+    lng ans = INF32;
+    for (int i = 0; i <= K; i++)
+        ans = min<lng>(ans, A[i + N - K - 1] - A[i]);
     
+    cout << ans << endl;
+
     return;
 }
 
@@ -30,7 +48,7 @@ int main() {
     cin.tie(NULL);
 
     int t = 1;
-    cin >> t;
+    // cin >> t;
     while (t--) {
         solve(t);
     }

@@ -11,17 +11,26 @@ using namespace __gnu_pbds;
 #define se second
 #define pb push_back
 // #define DEBUG
-typedef long long             lng;
-typedef pair<int, int>        pi;
-typedef vector<int>           vi;
-typedef pair<lng, lng>        pl;
-typedef vector<lng, lng>      vl;
+typedef long long    lng;
 
 int const INF32 = 0x3f3f3f3f;
 lng const INF64 = 0x3f3f3f3f3f3f3f3f;
 
 void solve(int t) {
-    
+    int a, b, c, d, e, f;
+    cin >> a >> b >> c >> d >> e >> f;
+    int g, h, i, j, k, l;
+    cin >> g >> h >> i >> j >> k >> l;
+
+    bool chk1 = (a < g && g < d) || (a < j && j < d) || (g <= a && d <= j); 
+    bool chk2 = (b < h && h < e) || (b < k && k < e) || (h <= b && e <= k); 
+    bool chk3 = (c < i && i < f) || (c < l && l < f) || (i <= c && f <= l); 
+
+    if (chk1 && chk2 && chk3)
+        cout << "Yes" << endl;
+    else
+        cout << "No" << endl;
+
     return;
 }
 
@@ -30,7 +39,7 @@ int main() {
     cin.tie(NULL);
 
     int t = 1;
-    cin >> t;
+    // cin >> t;
     while (t--) {
         solve(t);
     }

@@ -4,23 +4,23 @@
 #pragma GCC optimize("O1, O2, O3, Ofast, unroll-loops")
 #include <bits/stdc++.h>
 #include <ext/pb_ds/assoc_container.hpp>
+typedef long long             lng;
+typedef unsigned int          uint;
+typedef unsigned long long    ulng;
 using namespace std;
 using namespace __gnu_pbds;
-
-#define fi first
-#define se second
-#define pb push_back
-// #define DEBUG
-typedef long long             lng;
-typedef pair<int, int>        pi;
-typedef vector<int>           vi;
-typedef pair<lng, lng>        pl;
-typedef vector<lng, lng>      vl;
 
 int const INF32 = 0x3f3f3f3f;
 lng const INF64 = 0x3f3f3f3f3f3f3f3f;
 
-void solve(int t) {
+void solve() {
+    string s;
+    cin >> s;
+
+    if ((s[0] == 'R' && s[1] == 'M') || (s[0] == 'R' && s[2] == 'M') || (s[1] == 'R' && s[2] == 'M'))
+        cout << "Yes" << endl;
+    else 
+        cout << "No" << endl;
     
     return;
 }
@@ -30,9 +30,9 @@ int main() {
     cin.tie(NULL);
 
     int t = 1;
-    cin >> t;
+    // cin >> t;
     while (t--) {
-        solve(t);
+        solve();
     }
 
     return 0;

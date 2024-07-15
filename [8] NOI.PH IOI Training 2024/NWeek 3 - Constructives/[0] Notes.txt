@@ -1,0 +1,140 @@
+3.A1: IOI 2018/1 (Combo)
+
+////////////////////////////// CORE IDEA //////////////////////////////
+exploit the problem restrictions to maximize the amount of information
+that can be extracted from a single query
+
+it is possible to use just two queries to get the 1st character
+
+since each character after the first only has three possibilities, say
+A, B, X wlog, it is possible to use just one query to get the 2nd to 
+(N - 1)th character by querying SBSXASXBSXX, where S is the current 
+prefix figured out
+
+it is possible to use just two queries to get the Nth character
+///////////////////////////////////////////////////////////////////////
+
+
+
+3.A2: CF 1495C (Garden of the Sun)
+
+////////////////////////////// CORE IDEA //////////////////////////////
+by setting every third column as X, you are guaranteed to connect most 
+of the X's together and never form a cycle by the problem restrictions 
+connecting these X columns together and handling lone X's when N =
+0 mod 3 is rather trivial
+///////////////////////////////////////////////////////////////////////
+
+
+
+3.A3: CF 1787F (Inverse Transformation)
+
+////////////////////////////// CORE IDEA //////////////////////////////
+where do I even start with this one
+
+create a directed graph between the elements of the kth day and the
+(k + 1)st day
+for such a directed graph, there are two kinds of cycles, even-sized 
+and odd-sized
+observe that for some cycle in the directed graph, the ith element 
+becomes the (2 * i % cycle size)th element of the next day's cycle
+
+consequently, the even-sized cycles always split into two equal sized 
+cycles the next day:
+A -> B -> C -> D becomes A -> C and B -> D
+odd-sized cycles never split:
+A -> B -> C -> D -> E becomes A -> C -> E -> B -> D
+
+this process can be done in reverse too
+observe that for some cycle in the directed graph, the ith element 
+becomes the (2^(-1) * i % cycle size)th element of the previous day's 
+cycle 
+for odd cycle sizes, 2^(-1) = (cycle size + 1) / 2 mod cycle size
+
+two even-sized cycles of equal size will always combine when going back
+a day by alternating between the elements of the two cycles:
+A -> B and C -> D becomes A -> C -> B -> D
+two odd-sized cycles of equal size may or may not combine, but it is 
+optimal to combine as many of them as possible
+ 
+for e = p * 2^q even-sized cycles of some length es, since they must 
+always combine when going back a day, if q < k, then it is impossible
+to get the permutation on the first day
+otherwise, keep on combining the cycles for k days until you are left
+with p * 2^(q - k) cycles of length es * 2^k
+
+for 2^q <= o odd-sized cycles of some length os where q is as large as
+possible at any instant, the ith element of the kth day cycle becomes
+the (pow((cycle size + 1) / 2, max(k - q, 0)) * i % cycle size)th 
+element of the (k - max(k - q, 0))th day
+the steps for the last max(k - q, 0) days are the same as the 
+even-sized cycles in which the cycles are combined together
+subtract 2^q from o and recalculate q until o becomes 0
+///////////////////////////////////////////////////////////////////////
+
+
+
+3.B1: IOI 2016/5 (Unscrambling a Messy Bug)
+
+////////////////////////////// CORE IDEA //////////////////////////////
+employ a divide and conquer strategy where in n queries, divide the 
+search space by half
+
+for example, for n = 4 and P = {1, 2, 3, 0},
+(0, 1, 2, 3) -> (0, 1, 2, 3)
+we add strings 1000, 0100 then query 1000, 0100, 0010, 0001 to 
+identify where (0, 1) and (2, 3) lead to
+(0, 1) -> (0, 3); (2, 3) -> (1, 2)
+now, we add strings 1011, 1110 then query 1110, 0111; 1101, 1011 to
+identify where (0), (1), (2), and (3) lead to
+(0) -> (3); (1) -> (0); (2) -> (1); (3) -> (2)
+thus, P is reobtained
+
+this works because we use the knowledge from previous additions and 
+queries to limit the search space by setting those values to 1
+the total number of add and query calls are each roughly n * log(n), 
+which is enough to fit within the constraints of the final subtask
+///////////////////////////////////////////////////////////////////////
+
+
+
+3.B2: IOI 2019/5 (Vision Program)
+
+////////////////////////////// CORE IDEA //////////////////////////////
+there are two types of square diagonals important to this problem:
+    1. has a slope of 1  (t1)
+    2. has a slope of -1 (t2)
+let a and b be the distance between the two t1 and t2 diagonals, 
+respectively, passing through the first and second black squares
+
+if the two black squares are exactly K apart, then, wlog, a = K and 
+b <= a
+this works because moving between adjacent diagonals of the same type
+encompasses all the possibilities of moving in either the adjacent x- 
+or y-direction
+
+using the tools provided by the problem, it is possible to store in 
+bits which diagonals of each type pass through the black squares then 
+all the diagonals in between said diagonals
+for example, if we have five diagonals:
+    t1: 00100 -> 00100
+    t2: 01001 -> 01111
+afterwards, if there is exactly one pair of 1-bits K apart in one type
+of diagonal such that either no or one pair of 1-bits K apart exist in
+the other type, return 1, else 0
+this is essentially turning our condition of a = K and b <= a into bits
+///////////////////////////////////////////////////////////////////////
+
+
+
+3.C1: IOI 2022/2 (Prisoner Challenge)
+
+////////////////////////////// CORE IDEA //////////////////////////////
+///////////////////////////////////////////////////////////////////////
+
+
+
+3.C2: IOI 2018/4 (Mechanical Doll)
+
+////////////////////////////// CORE IDEA //////////////////////////////
+///////////////////////////////////////////////////////////////////////

@@ -1,0 +1,14 @@
+https://github.com/noi-ph/noi-ph-2024-training-week-2-implementation-Ausp3x
+
+1.  https://codeforces.com/gym/105093/problem/A
+2.  https://codeforces.com/gym/103496/problem/N
+3.  https://codeforces.com/gym/103496/problem/J
+4.  https://codeforces.com/gym/103496/problem/L
+5.  https://codeforces.com/problemset/problem/1280/B
+6.  https://codeforces.com/gym/102911/problem/I
+7.  https://codeforces.com/gym/104146/problem/C
+8.  https://codeforces.com/gym/103496/problem/E (unsolved)
+9.  https://codeforces.com/gym/103496/problem/M
+10. https://codeforces.com/gym/104146/problem/M (unsolved)
+11. https://codeforces.com/gym/105093/problem/L (unsolved)
+12. https://codeforces.com/gym/104146/problem/L (unsolved)

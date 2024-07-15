@@ -1,0 +1,9 @@
+https://progvar.fun/problemsets/noiph-2024-week-1
+
+All problems AC.
+
+1. Ausp3x
+2.a. O(nlogn)
+2.b. O(n)
+2.c. O(1)
+2.d. O(sqrt(n))

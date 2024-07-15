@@ -1,19 +1,22 @@
 // 人外有人，天外有天
 // author: Ausp3x
 
+#pragma GCC optimize("O1, O2, O3, Ofast, unroll-loops")
 #include <bits/stdc++.h>
 #include <ext/pb_ds/assoc_container.hpp>
-typedef long long             lng;
-typedef unsigned int          uint;
-typedef unsigned long long    ulng;
 using namespace std;
 using namespace __gnu_pbds;
+
+#define fi first
+#define se second
+#define pb push_back
+// #define DEBUG
+typedef long long    lng;
 
 int const INF32 = 0x3f3f3f3f;
 lng const INF64 = 0x3f3f3f3f3f3f3f3f;
 
-void solve() {
-    
+void solve(int t) {
     
     return;
 }
@@ -25,7 +28,7 @@ int main() {
     int t = 1;
     cin >> t;
     while (t--) {
-        solve();
+        solve(t);
     }
 
     return 0;

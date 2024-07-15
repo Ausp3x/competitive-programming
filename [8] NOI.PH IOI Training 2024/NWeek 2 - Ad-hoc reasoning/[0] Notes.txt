@@ -1,0 +1,125 @@
+2.A1: IOI 2016/1 (Detecting Molecules)
+
+////////////////////////////// CORE IDEA //////////////////////////////
+u - l >= w_max - w_min means that if the current sum is less than l,
+replacing w_i with w_j such that w_j > w_i will never result in the sum
+being greater than u in one step
+
+use binary search to determine the size of the set from 0 to n, and
+then check using a greedy algo if such a size is valid in O(n) time
+///////////////////////////////////////////////////////////////////////
+
+
+
+2.A2: CF 1781E (Rectangle Shrinking)
+
+////////////////////////////// CORE IDEA //////////////////////////////
+handle the 2 height (2h) blocks before the 1 height (1h) blocks
+process each type of block in the same row so that they do not overlap
+
+there are three possible interactions between a 1h and 2h blocks, which
+can be processed in linear time to maximize covered area
+1. if the 1h completely overlaps the 2h in width, erase the overlapped
+2h section
+2. if the 1h partially overlaps the 2h in width, erase the overlapped 
+1h section
+3. if the 1h is completely inside the 2h, erase the 1h
+///////////////////////////////////////////////////////////////////////
+
+
+
+2.A3: IOI 2015/1 (Boxes with Souvenirs)
+
+////////////////////////////// CORE IDEA //////////////////////////////
+let one trip be a travel that visits section 0 twice
+any section is at most L/2 seconds clockwise or counterclockwise from 0
+-> cw/ccw trip
+it is never optimal go the opposite direction in the same trip unless 
+you are going back to section 0
+if a trip passes the L/2 border, it is optimal to continue onwards in
+a full circle that takes L seconds -> full trip
+
+for a series of cw or ccw trips, it is always optimal go to the
+farthest possible section and deliver as many souvenirs (K) as possible
+a complete set of trips will only ever have at most 1 full trip to deal
+with crossing the L/2 border
+
+use prefix and suffix dp to calculate in linear time a how long a 
+series of cw, ccw, and full trips following the conditions above will
+take
+///////////////////////////////////////////////////////////////////////
+
+
+
+2.B1: CF 1605E (Array Equalizer)
+
+////////////////////////////// CORE IDEA //////////////////////////////
+it is always optimal to increase b_i, and by extension b_{2i}, b_{3i},
+..., by a_i - b_i at some 1 <= i <= n in increasing order, because
+elements at future indices do not affect the current element being
+processed
+
+as x increases by 1, the difference values (i.e. a_i - b_i) at some i 
+can only ever increase by 1, not change, or decrease by 1
+by cataloguing all difference values that approach 0 (e.g. -3 -> -2 or 
+3 -> 2), the net change between answers as x increases by 1 can be
+determined in constant time
+
+since x <= 1e6, dp can be used to precalculate all possible queries in
+linear time
+///////////////////////////////////////////////////////////////////////
+
+
+
+2.B2: IOI 2020/3 (Carnival Tickets)
+
+////////////////////////////// CORE IDEA //////////////////////////////
+b will always be the median of the as chosen for the round
+the prize in every round is the sum of the largest half (+) of the 
+chosen as minus the smallest half (-) of the chosen as
+
+instead of trying to maximize k rounds, it is possible to maximize one
+round with k * n as and then split it into the necessary k rounds by 
+greedily taking the largest half of the smaller round from the colors 
+that have the most number of (+) in the k * n round at that moment and
+vice versa 
+
+the k * n round itself can be maximized by following these steps:
+1. set the smallest k as of each color to (-)
+2.1. if k < m, get the largest unused a and the largest (-) a of some 
+color that gives the largest sum
+the unused a becomes (+) the (-) a becomes unused
+2.2. if k = m, get the largest (-) a among all colors
+the (-) a becomes (+)
+3. repeat until there are exactly k * n / 2 (+) as in the k * n round
+use priority queues to reduce the time complexity from cubic to 
+quadratic logarithmic
+///////////////////////////////////////////////////////////////////////
+
+
+
+2.C1: IOI 2014/1 (Rail) [30/100]
+
+////////////////////////////// CORE IDEA //////////////////////////////
+subtask 1: for some station 0 < i < n, its block is just first +
+getDistance(0, i), since it is impossible for a D-type station to be
+to the left of station 0
+
+subtask 2: the station that is the smallest distance away from station
+0 is the leftmost D-type station (let that be ld) to the right of
+station 0
+if getDistance(0, i) > getDistance(ld, i), the station is a C-type to
+the left of station 0
+otherwise, the station is a D-type to the right of station 0 
+///////////////////////////////////////////////////////////////////////
+
+
+
+2.C2: IOI 2016/2 (Roller Coaster Railroad)
+
+////////////////////////////// CORE IDEA //////////////////////////////
+subtask 1: run through all possible permutations
+
+subtask 2: use bitmask dp where the n * 2^n states are (special 
+sections used, ending special section among used special sections)
+///////////////////////////////////////////////////////////////////////
