@@ -1,0 +1,122 @@
+5.B1: IOI 2016/4 (Paint By Number)
+
+////////////////////////////// CORE IDEA //////////////////////////////
+the first part is to determine if it is possible for the ith cell 
+(where i = 0 means no cell yet) to be black or white while satisfying 
+the first j clues (where j = 0 means no clues satisfied yet). This can 
+be determined with O(nk) dp where:
+base case: dp(0, 0, 1) = 1
+1) dp(i, j, 1) = dp(i - 1, j, 0) | dp(i - 1, j, 1)
+2) dp(i, j, 0) = dp(i - clues(j), j - 1, 1) iff there is no required 
+white tile ('_') in any of the cells [i - clues(j - 1) + 1, i]
+actually, the black case has a caveat where we are only considering the
+cell at the end of the line of black cells
+
+The second part is to do the same dp but in reverse (from back to 
+front). If it is possible for a cell to be black or white in both dps, 
+then it can be black or white among all possible solutions. So, we just
+need to record that and formulate our answer accordingly
+///////////////////////////////////////////////////////////////////////
+
+
+
+5.B2: CF 1280D (Miss Punyverse)
+
+////////////////////////////// CORE IDEA //////////////////////////////
+the Oak is a tree, which we can root at some node (I did 1)
+
+now, for some subtree rooted at i with exactly j regions, define 
+dp(i, j) as the maximum possible number of winning regions "win" 
+excluding the village containing i. To handle the fact that i can be 
+merged or not merged with the topmost villages of its subtrees, we also 
+store "adv" which is the advantage of the village containing i, where 
+advantage is defined by the number of wasp votes minus bee votes in 
+said village
+
+a key observation is that we always want to maximize win before adv, 
+since adv can only contribute at most 1 to win
+
+by being smart with implementation and only considering up to 
+min(m, size of subtree i) regions per node, we can reduce the O(n^3) dp 
+to just O(n^2)
+///////////////////////////////////////////////////////////////////////
+
+
+
+5.B3: IOI 2017/2 (Wiring)
+
+////////////////////////////// CORE IDEA //////////////////////////////
+subtask 1:
+do dp(i, j) which describes the minimum cost if the first i red 
+connection points and j blue connection points are connected. Then
+dp(i, j) = min(dp(i, j), min({dp(i - 1, j), dp(i, j - 1), 
+dp(i - 1, j - 1)}) + abs(R[i] - B[j]))
+
+subtask 2:
+find a pattern that minimizes the cost. In particular, we either 
+connect the excess left reds to the leftmost blue or the excess left 
+blues to the rightmost red. I think this can actually be solved with 
+mathematics (proof: trust me bro)
+
+for the full solution, divide the tower into blocks of consecutive reds 
+or blues, and let dp(i) be the minimum cost to connect the first i 
+connection points in order
+
+for some current block [i, j], dp(0) to dp(i - 1) are just correct 
+while dp(i) to dp(j) are correct if we only consider connections to the 
+left
+
+consider moving from the previous block [k, i - 1] to the current block 
+[i, j]. We update dp(k) to dp(i - 1) to their correct values, since it 
+may be more optimal to connect points in [k, i - 1] to points in 
+[i, j]. We then calculate the incomplete correct values of dp(i) to 
+dp(j) by "rainbow connecting" to the points in [k, i - 1]. The final 
+answer is dp(n + m)
+///////////////////////////////////////////////////////////////////////
+
+
+
+5.B4: IOI 2020/4 (Packing Biscuits)
+
+////////////////////////////// CORE IDEA //////////////////////////////
+subtask 1: 
+iterate through all possible values of y <= 100000 / x. Observe that 2 
+cookies of tastiness 2^i is equivalent to one cookie of tastiness 
+2^(i + 1), so we can greedily take said cookies from tastiest to least 
+tasty. If we cannot completely fill up the x bags then y is not 
+possible
+
+subtask 2:
+using the observation in Subtask 1, we merge cookies until each of 
+A_i <= 2. We then form a disjoint set of maximum values reached with 
+the cookies (divided by the smallest 2^i in the maximum value). Add 
+one to each value then multiply together to get the answer
+
+for the full solution, let B_i be the sum of 2^0 * A_0 + 2^1 * A_1 + 
+2^2 * A_2... 2^i * A_i. Then, consider 2^i <= y < 2^(i + 1). y is only 
+possible iff y - 2^i is possible and yx <= B_i. This is true because 
+yx <= B_i means we can merge the excess cookies from a valid y - 2^i to 
+at least x cookies of type i to form a valid y
+
+as such, we can rephrase the problem. Let dp(n) be the number of y's 
+less than n that are possible. Then
+dp(<=0) = 0
+dp(1) = 1
+dp(n) = dp(2^i) + dp(min(B_i / x + 1, n) - 2^i)
+this runs in O(k^2) time by storing previous values with an unordered 
+map
+///////////////////////////////////////////////////////////////////////
+
+
+
+5.C1: IOI 2022/1 (Catfish Farm)
+
+////////////////////////////// CORE IDEA //////////////////////////////
+///////////////////////////////////////////////////////////////////////
+
+
+
+5.C2: IOI 2016/6 (Aliens)
+
+////////////////////////////// CORE IDEA //////////////////////////////
+///////////////////////////////////////////////////////////////////////

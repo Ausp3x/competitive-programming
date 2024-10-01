@@ -90,7 +90,8 @@
         "spanstream": "cpp",
         "stacktrace": "cpp",
         "format": "cpp",
-        "stdfloat": "cpp"
+        "stdfloat": "cpp",
+        "cassert": "cpp"
     },
     "editor.fontFamily": "'Fira Code'",
     "C_Cpp.default.compilerPath": "",

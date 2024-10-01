@@ -11,17 +11,16 @@ using namespace __gnu_pbds;
 #define se second
 #define pb push_back
 // #define DEBUG
-typedef long long             lng;
-typedef pair<int, int>        pi;
-typedef vector<int>           vi;
-typedef pair<lng, lng>        pl;
-typedef vector<lng, lng>      vl;
+typedef long long    lng;
+typedef __int128     lll;
+template<class T> 
+using indexed_set = tree<T, null_type, less<T>, rb_tree_tag, tree_order_statistics_node_update>;
 
 int const INF32 = 0x3f3f3f3f;
 lng const INF64 = 0x3f3f3f3f3f3f3f3f;
 
-void solve(int t) {
-    
+void solve() {
+
     return;
 }
 
@@ -30,9 +29,9 @@ int main() {
     cin.tie(NULL);
 
     int t = 1;
-    cin >> t;
+    // cin >> t;
     while (t--) {
-        solve(t);
+        solve();
     }
 
     return 0;

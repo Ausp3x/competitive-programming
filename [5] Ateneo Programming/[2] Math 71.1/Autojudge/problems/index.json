@@ -1,0 +1,810 @@
+{
+    "sec1.1/variables-numbers/temp-f-to-c": {
+        "json": "1.1.9.json",
+        "ajp": "Section 1.1 - Numbers and strings.ajp"
+    },
+    "sec1.1/variables-numbers/nth-root": {
+        "json": "1.1.10.json",
+        "ajp": "Section 1.1 - Numbers and strings.ajp"
+    },
+    "sec1.1/variables-numbers/quadratic-formula": {
+        "json": "1.1.11.json",
+        "ajp": "Section 1.1 - Numbers and strings.ajp"
+    },
+    "sec1.1/variables-numbers/project-split": {
+        "json": "1.1.12.json",
+        "ajp": "Section 1.1 - Numbers and strings.ajp"
+    },
+    "sec1.1/variables-numbers/making-change": {
+        "json": "1.1.13.json",
+        "ajp": "Section 1.1 - Numbers and strings.ajp"
+    },
+    "sec1.1/variables-numbers/cookies": {
+        "json": "1.1.14.json",
+        "ajp": "Section 1.1 - Numbers and strings.ajp"
+    },
+    "sec1.1/variables-numbers-strings/greeting": {
+        "json": "1.1.15.json",
+        "ajp": "Section 1.1 - Numbers and strings.ajp"
+    },
+    "sec1.1/variables-numbers-strings/position-name": {
+        "json": "1.1.16.json",
+        "ajp": "Section 1.1 - Numbers and strings.ajp"
+    },
+    "sec1.1/variables-numbers-strings/temp-all": {
+        "json": "1.1.17.json",
+        "ajp": "Section 1.1 - Numbers and strings.ajp"
+    },
+    "sec1.1/variables-numbers-strings/donut-optimization": {
+        "json": "1.1.18.json",
+        "ajp": "Section 1.1 - Numbers and strings.ajp"
+    },
+    "sec1.1/variables-numbers-strings/bar-graph": {
+        "json": "1.1.20.json",
+        "ajp": "Section 1.1 - Numbers and strings.ajp"
+    },
+    "sec1.1/variables-numbers-strings/string-slicing": {
+        "json": "1.1.21.json",
+        "ajp": "Section 1.1 - Numbers and strings.ajp"
+    },
+    "sec1.1/variables-numbers-strings/password-security": {
+        "json": "1.1.22.json",
+        "ajp": "Section 1.1 - Numbers and strings.ajp"
+    },
+    "sec1.1/variables-numbers-strings/megabytes": {
+        "json": "1.1.23.json",
+        "ajp": "Section 1.1 - Numbers and strings.ajp"
+    },
+    "sec1.1/variables-numbers-strings/inches-to-cm": {
+        "json": "1.1.24.json",
+        "ajp": "Section 1.1 - Numbers and strings.ajp"
+    },
+    "sec1.1/variables-numbers-strings/team-x": {
+        "json": "1.1.25.json",
+        "ajp": "Section 1.1 - Numbers and strings.ajp"
+    },
+    "sec1.1/variables-numbers-strings/plan-x-doc": {
+        "json": "1.1.26.json",
+        "ajp": "Section 1.1 - Numbers and strings.ajp"
+    },
+    "sec1.1/variables-numbers-strings/middle-letter": {
+        "json": "1.1.27.json",
+        "ajp": "Section 1.1 - Numbers and strings.ajp"
+    },
+    "sec1.1/variables-numbers-strings/sum-three-digits": {
+        "json": "1.1.28.json",
+        "ajp": "Section 1.1 - Numbers and strings.ajp"
+    },
+    "sec1.2/boolean-expressions/greater-than": {
+        "json": "1.2.1.json",
+        "ajp": "Section 1.2 - Conditionals.ajp"
+    },
+    "sec1.2/boolean-expressions/not-equal": {
+        "json": "1.2.2.json",
+        "ajp": "Section 1.2 - Conditionals.ajp"
+    },
+    "sec1.2/boolean-expressions/is-even": {
+        "json": "1.2.3.json",
+        "ajp": "Section 1.2 - Conditionals.ajp"
+    },
+    "sec1.2/boolean-expressions/both-are-even": {
+        "json": "1.2.4.json",
+        "ajp": "Section 1.2 - Conditionals.ajp"
+    },
+    "sec1.2/boolean-expressions/is-divisible": {
+        "json": "1.2.5.json",
+        "ajp": "Section 1.2 - Conditionals.ajp"
+    },
+    "sec1.2/boolean-expressions/is-divisible-two": {
+        "json": "1.2.6.json",
+        "ajp": "Section 1.2 - Conditionals.ajp"
+    },
+    "sec1.2/boolean-expressions/height-compatible": {
+        "json": "1.2.7.json",
+        "ajp": "Section 1.2 - Conditionals.ajp"
+    },
+    "sec1.2/boolean-expressions/triangle-inequality-theorem": {
+        "json": "1.2.8.json",
+        "ajp": "Section 1.2 - Conditionals.ajp"
+    },
+    "sec1.2/boolean-expressions/begins-with-vowel": {
+        "json": "1.2.9.json",
+        "ajp": "Section 1.2 - Conditionals.ajp"
+    },
+    "sec1.2/boolean-expressions/begin-end-vowels": {
+        "json": "1.2.10.json",
+        "ajp": "Section 1.2 - Conditionals.ajp"
+    },
+    "sec1.2/boolean-expressions/three-digits-long": {
+        "json": "1.2.11.json",
+        "ajp": "Section 1.2 - Conditionals.ajp"
+    },
+    "sec1.2/boolean-expressions/exactly-two-equal": {
+        "json": "1.2.12.json",
+        "ajp": "Section 1.2 - Conditionals.ajp"
+    },
+    "sec1.2/boolean-expressions/string-is-contained": {
+        "json": "1.2.13.json",
+        "ajp": "Section 1.2 - Conditionals.ajp"
+    },
+    "sec1.2/boolean-expressions/equation-parsing1": {
+        "json": "1.2.14.json",
+        "ajp": "Section 1.2 - Conditionals.ajp"
+    },
+    "sec1.2/boolean-expressions/equation-parsing2": {
+        "json": "1.2.15.json",
+        "ajp": "Section 1.2 - Conditionals.ajp"
+    },
+    "sec1.2/boolean-expressions/leap-years": {
+        "json": "1.2.16.json",
+        "ajp": "Section 1.2 - Conditionals.ajp"
+    },
+    "sec1.2/constructing-conditionals/number-magnitude-1": {
+        "json": "1.2.25.json",
+        "ajp": "Section 1.2 - Conditionals.ajp"
+    },
+    "sec1.2/constructing-conditionals/number-magnitude-2": {
+        "json": "1.2.26.json",
+        "ajp": "Section 1.2 - Conditionals.ajp"
+    },
+    "sec1.2/constructing-conditionals/too-long-1": {
+        "json": "1.2.27.json",
+        "ajp": "Section 1.2 - Conditionals.ajp"
+    },
+    "sec1.2/constructing-conditionals/too-long-2": {
+        "json": "1.2.28.json",
+        "ajp": "Section 1.2 - Conditionals.ajp"
+    },
+    "sec1.2/constructing-conditionals/copula-conjugation": {
+        "json": "1.2.29.json",
+        "ajp": "Section 1.2 - Conditionals.ajp"
+    },
+    "sec1.2/constructing-conditionals/letter-grades": {
+        "json": "1.2.30.json",
+        "ajp": "Section 1.2 - Conditionals.ajp"
+    },
+    "sec1.2/constructing-conditionals/ordinal-form": {
+        "json": "1.2.31.json",
+        "ajp": "Section 1.2 - Conditionals.ajp"
+    },
+    "sec1.2/constructing-conditionals/tagalog-verbs": {
+        "json": "1.2.32.json",
+        "ajp": "Section 1.2 - Conditionals.ajp"
+    },
+    "sec1.2/constructing-conditionals/pizza-deals": {
+        "json": "1.2.33.json",
+        "ajp": "Section 1.2 - Conditionals.ajp"
+    },
+    "sec1.2/constructing-conditionals/three-items": {
+        "json": "1.2.34.json",
+        "ajp": "Section 1.2 - Conditionals.ajp"
+    },
+    "sec1.2/constructing-conditionals/restaurant-price": {
+        "json": "1.2.35.json",
+        "ajp": "Section 1.2 - Conditionals.ajp"
+    },
+    "sec1.2/constructing-conditionals/number-commands": {
+        "json": "1.2.36.json",
+        "ajp": "Section 1.2 - Conditionals.ajp"
+    },
+    "sec1.2/constructing-conditionals/middle-number": {
+        "json": "1.2.37.json",
+        "ajp": "Section 1.2 - Conditionals.ajp"
+    },
+    "sec1.2/constructing-conditionals/sort-descending": {
+        "json": "1.2.38.json",
+        "ajp": "Section 1.2 - Conditionals.ajp"
+    },
+    "sec1.2/constructing-conditionals/count-letter-a": {
+        "json": "1.2.39.json",
+        "ajp": "Section 1.2 - Conditionals.ajp"
+    },
+    "sec1.2/constructing-conditionals/potential-match": {
+        "json": "1.2.40.json",
+        "ajp": "Section 1.2 - Conditionals.ajp"
+    },
+    "sec1.2/constructing-conditionals/si-meters": {
+        "json": "1.2.41.json",
+        "ajp": "Section 1.2 - Conditionals.ajp"
+    },
+    "sec1.2/constructing-conditionals/rotate-two-by-two": {
+        "json": "1.2.42.json",
+        "ajp": "Section 1.2 - Conditionals.ajp"
+    },
+    "sec1.2/constructing-conditionals/coin-types": {
+        "json": "1.2.43.json",
+        "ajp": "Section 1.2 - Conditionals.ajp"
+    },
+    "sec1.2/constructing-conditionals/time-plus-half-hour": {
+        "json": "1.2.44.json",
+        "ajp": "Section 1.2 - Conditionals.ajp"
+    },
+    "sec1.3/io-with-sequences/word-counter": {
+        "json": "1.3.3.json",
+        "ajp": "Section 1.3 - Sequences.ajp"
+    },
+    "sec1.3/io-with-sequences/trim-sentence": {
+        "json": "1.3.4.json",
+        "ajp": "Section 1.3 - Sequences.ajp"
+    },
+    "sec1.3/flower-read/all/max": {
+        "json": "1.3.5.json",
+        "ajp": "Section 1.3 - Sequences.ajp"
+    },
+    "sec1.3/flower-read/all/min": {
+        "json": "1.3.6.json",
+        "ajp": "Section 1.3 - Sequences.ajp"
+    },
+    "sec1.3/flower-read/all/average": {
+        "json": "1.3.7.json",
+        "ajp": "Section 1.3 - Sequences.ajp"
+    },
+    "sec1.3/flower-read/one/max": {
+        "json": "1.3.8.json",
+        "ajp": "Section 1.3 - Sequences.ajp"
+    },
+    "sec1.3/flower-read/one/average": {
+        "json": "1.3.9.json",
+        "ajp": "Section 1.3 - Sequences.ajp"
+    },
+    "sec1.3/flower-read/except/max": {
+        "json": "1.3.10.json",
+        "ajp": "Section 1.3 - Sequences.ajp"
+    },
+    "sec1.3/flower-read/except/average": {
+        "json": "1.3.11.json",
+        "ajp": "Section 1.3 - Sequences.ajp"
+    },
+    "sec1.3/io-with-sequences/inequality-checker": {
+        "json": "1.3.12.json",
+        "ajp": "Section 1.3 - Sequences.ajp"
+    },
+    "sec1.3/io-with-sequences/inequality-checker-extension": {
+        "json": "1.3.13.json",
+        "ajp": "Section 1.3 - Sequences.ajp"
+    },
+    "sec1.3/io-with-sequences/from-the-left": {
+        "json": "1.3.14.json",
+        "ajp": "Section 1.3 - Sequences.ajp"
+    },
+    "sec1.3/io-with-sequences/pinocchio": {
+        "json": "1.3.15.json",
+        "ajp": "Section 1.3 - Sequences.ajp"
+    },
+    "sec1.3/io-with-sequences/word-chain": {
+        "json": "1.3.16.json",
+        "ajp": "Section 1.3 - Sequences.ajp"
+    },
+    "sec1.3/io-with-sequences/karaniwan-o-hindi": {
+        "json": "1.3.17.json",
+        "ajp": "Section 1.3 - Sequences.ajp"
+    },
+    "sec1.3/io-with-sequences/distance-between-points": {
+        "json": "1.3.18.json",
+        "ajp": "Section 1.3 - Sequences.ajp"
+    },
+    "sec1.3/indexing/permutation": {
+        "json": "1.3.19.json",
+        "ajp": "Section 1.3 - Sequences.ajp"
+    },
+    "sec1.3/indexing/permutation-inverse": {
+        "json": "1.3.20.json",
+        "ajp": "Section 1.3 - Sequences.ajp"
+    },
+    "sec1.3/slices/priority-lane": {
+        "json": "1.3.21.json",
+        "ajp": "Section 1.3 - Sequences.ajp"
+    },
+    "sec1.3/slices/cyclic-shift": {
+        "json": "1.3.22.json",
+        "ajp": "Section 1.3 - Sequences.ajp"
+    },
+    "sec1.3/indexing/alice-bob-cindy-dani": {
+        "json": "1.3.23.json",
+        "ajp": "Section 1.3 - Sequences.ajp"
+    },
+    "sec1.3/list-ops/abc-2": {
+        "json": "1.3.24.json",
+        "ajp": "Section 1.3 - Sequences.ajp"
+    },
+    "sec1.3/indexing/four-of-diamonds": {
+        "json": "1.3.25.json",
+        "ajp": "Section 1.3 - Sequences.ajp"
+    },
+    "sec1.4/pigs": {
+        "json": "1.4.5.json",
+        "ajp": "Section 1.4 - Functions and abstraction.ajp"
+    },
+    "sec1.4/quadrilateral-perimeter": {
+        "json": "1.4.6.json",
+        "ajp": "Section 1.4 - Functions and abstraction.ajp"
+    },
+    "sec1.4/syllogism": {
+        "json": "1.4.7.json",
+        "ajp": "Section 1.4 - Functions and abstraction.ajp"
+    },
+    "sec1.4/runner": {
+        "json": "1.4.8.json",
+        "ajp": "Section 1.4 - Functions and abstraction.ajp"
+    },
+    "sec1.4/bounding-box": {
+        "json": "1.4.9.json",
+        "ajp": "Section 1.4 - Functions and abstraction.ajp"
+    },
+    "sec1.4/straights/straight-no-aces": {
+        "json": "1.4.10.json",
+        "ajp": "Section 1.4 - Functions and abstraction.ajp"
+    },
+    "sec1.4/straights/straight": {
+        "json": "1.4.11.json",
+        "ajp": "Section 1.4 - Functions and abstraction.ajp"
+    },
+    "sec1.4/straights/straight-balatro-no-aces": {
+        "json": "1.4.12.json",
+        "ajp": "Section 1.4 - Functions and abstraction.ajp"
+    },
+    "sec1.4/straights/straight-balatro": {
+        "json": "1.4.13.json",
+        "ajp": "Section 1.4 - Functions and abstraction.ajp"
+    },
+    "sec1.4/flower/all-median": {
+        "json": "1.4.14.json",
+        "ajp": "Section 1.4 - Functions and abstraction.ajp"
+    },
+    "sec1.4/flower/subarray-median": {
+        "json": "1.4.15.json",
+        "ajp": "Section 1.4 - Functions and abstraction.ajp"
+    },
+    "sec1.4/flower/except-median": {
+        "json": "1.4.16.json",
+        "ajp": "Section 1.4 - Functions and abstraction.ajp"
+    },
+    "sec1.4/circle-formula": {
+        "json": "1.4.17.json",
+        "ajp": "Section 1.4 - Functions and abstraction.ajp"
+    },
+    "sec1.4/sphere-formula": {
+        "json": "1.4.18.json",
+        "ajp": "Section 1.4 - Functions and abstraction.ajp"
+    },
+    "sec1.4/law-of-cosines": {
+        "json": "1.4.19.json",
+        "ajp": "Section 1.4 - Functions and abstraction.ajp"
+    },
+    "sec1.P/quadratic-root-counting": {
+        "json": "1.P.1.json",
+        "ajp": "Section 1.P - Chapter 1 Problems.ajp"
+    },
+    "sec1.P/hot-potato": {
+        "json": "1.P.2.json",
+        "ajp": "Section 1.P - Chapter 1 Problems.ajp"
+    },
+    "sec1.P/hot-potato-2": {
+        "json": "1.P.3.json",
+        "ajp": "Section 1.P - Chapter 1 Problems.ajp"
+    },
+    "sec1.P/single-or-bundle": {
+        "json": "1.P.4.json",
+        "ajp": "Section 1.P - Chapter 1 Problems.ajp"
+    },
+    "sec1.P/chessboard/rook": {
+        "json": "1.P.5.json",
+        "ajp": "Section 1.P - Chapter 1 Problems.ajp"
+    },
+    "sec1.P/chessboard/bishop": {
+        "json": "1.P.6.json",
+        "ajp": "Section 1.P - Chapter 1 Problems.ajp"
+    },
+    "sec1.P/chessboard/king": {
+        "json": "1.P.7.json",
+        "ajp": "Section 1.P - Chapter 1 Problems.ajp"
+    },
+    "sec1.P/kinematic-verifier": {
+        "json": "1.P.8.json",
+        "ajp": "Section 1.P - Chapter 1 Problems.ajp"
+    },
+    "sec1.P/kinematic-two-unknowns": {
+        "json": "1.P.9.json",
+        "ajp": "Section 1.P - Chapter 1 Problems.ajp"
+    },
+    "sec1.P/comp-geom-collinear": {
+        "json": "1.P.11.json",
+        "ajp": "Section 1.P - Chapter 1 Problems.ajp"
+    },
+    "sec1.P/comp-geom-lines-perpendicular": {
+        "json": "1.P.12.json",
+        "ajp": "Section 1.P - Chapter 1 Problems.ajp"
+    },
+    "sec1.P/comp-geom-lines-parallel": {
+        "json": "1.P.13.json",
+        "ajp": "Section 1.P - Chapter 1 Problems.ajp"
+    },
+    "sec1.P/comp-geom-intersect-point-circle": {
+        "json": "1.P.14.json",
+        "ajp": "Section 1.P - Chapter 1 Problems.ajp"
+    },
+    "sec1.P/comp-geom-intersect-circle-circle": {
+        "json": "1.P.15.json",
+        "ajp": "Section 1.P - Chapter 1 Problems.ajp"
+    },
+    "sec1.P/comp-geom-intersect-intervals": {
+        "json": "1.P.16.json",
+        "ajp": "Section 1.P - Chapter 1 Problems.ajp"
+    },
+    "sec1.P/comp-geom-intersect-point-rectangle": {
+        "json": "1.P.17.json",
+        "ajp": "Section 1.P - Chapter 1 Problems.ajp"
+    },
+    "sec1.P/comp-geom-intersect-rectangle-rectangle": {
+        "json": "1.P.18.json",
+        "ajp": "Section 1.P - Chapter 1 Problems.ajp"
+    },
+    "sec2.1/parity/compute": {
+        "json": "2.1.9.json",
+        "ajp": "Section 2.1 - For loops.ajp"
+    },
+    "sec2.1/parity/compare": {
+        "json": "2.1.10.json",
+        "ajp": "Section 2.1 - For loops.ajp"
+    },
+    "sec2.1/parity/correct-statement": {
+        "json": "2.1.11.json",
+        "ajp": "Section 2.1 - For loops.ajp"
+    },
+    "sec2.1/flower/increment-all": {
+        "json": "2.1.12.json",
+        "ajp": "Section 2.1 - For loops.ajp"
+    },
+    "sec2.1/flower/wilt-threshold": {
+        "json": "2.1.13.json",
+        "ajp": "Section 2.1 - For loops.ajp"
+    },
+    "sec2.1/flower/decrement-taller-neighbor": {
+        "json": "2.1.14.json",
+        "ajp": "Section 2.1 - For loops.ajp"
+    },
+    "sec2.1/flower/increment-equal-neighbor": {
+        "json": "2.1.15.json",
+        "ajp": "Section 2.1 - For loops.ajp"
+    },
+    "sec2.1/flower/grow-shortest": {
+        "json": "2.1.16.json",
+        "ajp": "Section 2.1 - For loops.ajp"
+    },
+    "sec2.1/flower/grow-min-to-max": {
+        "json": "2.1.17.json",
+        "ajp": "Section 2.1 - For loops.ajp"
+    },
+    "sec2.1/flower/list-local-maxima": {
+        "json": "2.1.18.json",
+        "ajp": "Section 2.1 - For loops.ajp"
+    },
+    "sec2.1/flower/list-middle-childs": {
+        "json": "2.1.19.json",
+        "ajp": "Section 2.1 - For loops.ajp"
+    },
+    "sec2.1/flower/increment-range": {
+        "json": "2.1.20.json",
+        "ajp": "Section 2.1 - For loops.ajp"
+    },
+    "sec2.1/flower/set-range": {
+        "json": "2.1.21.json",
+        "ajp": "Section 2.1 - For loops.ajp"
+    },
+    "sec2.1/flower/set-range-one-sided": {
+        "json": "2.1.22.json",
+        "ajp": "Section 2.1 - For loops.ajp"
+    },
+    "sec2.1/flower/elementwise-add": {
+        "json": "2.1.23.json",
+        "ajp": "Section 2.1 - For loops.ajp"
+    },
+    "sec2.1/flower/elementwise-add-subarray": {
+        "json": "2.1.24.json",
+        "ajp": "Section 2.1 - For loops.ajp"
+    },
+    "sec2.1/bitstring/set-substring": {
+        "json": "2.1.25.json",
+        "ajp": "Section 2.1 - For loops.ajp"
+    },
+    "sec2.1/bitstring/flip-substring": {
+        "json": "2.1.26.json",
+        "ajp": "Section 2.1 - For loops.ajp"
+    },
+    "sec2.1/bitstring/flip-outside-substring": {
+        "json": "2.1.27.json",
+        "ajp": "Section 2.1 - For loops.ajp"
+    },
+    "sec2.1/bitstring/elementwise-ops": {
+        "json": "2.1.28.json",
+        "ajp": "Section 2.1 - For loops.ajp"
+    },
+    "sec2.1/cards/swap-top-bottom": {
+        "json": "2.1.29.json",
+        "ajp": "Section 2.1 - For loops.ajp"
+    },
+    "sec2.1/cards/remove-match-top": {
+        "json": "2.1.30.json",
+        "ajp": "Section 2.1 - For loops.ajp"
+    },
+    "sec2.1/cards/filter-covered-face": {
+        "json": "2.1.31.json",
+        "ajp": "Section 2.1 - For loops.ajp"
+    },
+    "sec2.1/cards/remove-better-bottom": {
+        "json": "2.1.32.json",
+        "ajp": "Section 2.1 - For loops.ajp"
+    },
+    "sec2.1/cards/filter-suit": {
+        "json": "2.1.33.json",
+        "ajp": "Section 2.1 - For loops.ajp"
+    },
+    "sec2.1/cards/collect-suit": {
+        "json": "2.1.34.json",
+        "ajp": "Section 2.1 - For loops.ajp"
+    },
+    "sec2.1/cards/shuffle-hindu": {
+        "json": "2.1.35.json",
+        "ajp": "Section 2.1 - For loops.ajp"
+    },
+    "sec2.1/cards/shuffle-faro": {
+        "json": "2.1.36.json",
+        "ajp": "Section 2.1 - For loops.ajp"
+    },
+    "sec2.1/harder/construct-difference-array": {
+        "json": "2.1.37.json",
+        "ajp": "Section 2.1 - For loops.ajp"
+    },
+    "sec2.1/harder/maze-backtracking": {
+        "json": "2.1.38.json",
+        "ajp": "Section 2.1 - For loops.ajp"
+    },
+    "sec2.1/harder/compress-runs": {
+        "json": "2.1.39.json",
+        "ajp": "Section 2.1 - For loops.ajp"
+    },
+    "sec2.2/count/starting-letter": {
+        "json": "2.2.1.json",
+        "ajp": "Section 2.2 - List manipulation patterns.ajp"
+    },
+    "sec2.2/count/above-below-average": {
+        "json": "2.2.2.json",
+        "ajp": "Section 2.2 - List manipulation patterns.ajp"
+    },
+    "sec2.2/count/cards/hearts": {
+        "json": "2.2.3.json",
+        "ajp": "Section 2.2 - List manipulation patterns.ajp"
+    },
+    "sec2.2/count/cards/face": {
+        "json": "2.2.4.json",
+        "ajp": "Section 2.2 - List manipulation patterns.ajp"
+    },
+    "sec2.2/count/cards/value-same-as-first": {
+        "json": "2.2.5.json",
+        "ajp": "Section 2.2 - List manipulation patterns.ajp"
+    },
+    "sec2.2/count/cards/color-one-same-neighbor": {
+        "json": "2.2.6.json",
+        "ajp": "Section 2.2 - List manipulation patterns.ajp"
+    },
+    "sec2.2/count/dna-complement": {
+        "json": "2.2.7.json",
+        "ajp": "Section 2.2 - List manipulation patterns.ajp"
+    },
+    "sec2.2/any-all/any-factors": {
+        "json": "2.2.8.json",
+        "ajp": "Section 2.2 - List manipulation patterns.ajp"
+    },
+    "sec2.2/any-all/all-start-same-letter": {
+        "json": "2.2.9.json",
+        "ajp": "Section 2.2 - List manipulation patterns.ajp"
+    },
+    "sec2.2/any-all/arithmetic-sequence": {
+        "json": "2.2.10.json",
+        "ajp": "Section 2.2 - List manipulation patterns.ajp"
+    },
+    "sec2.2/any-all/equal-increasing-decreasing-none": {
+        "json": "2.2.11.json",
+        "ajp": "Section 2.2 - List manipulation patterns.ajp"
+    },
+    "sec2.2/any-all/abcs-of-men-and-women": {
+        "json": "2.2.12.json",
+        "ajp": "Section 2.2 - List manipulation patterns.ajp"
+    },
+    "sec2.2/reduce/reimplement-min": {
+        "json": "2.2.13.json",
+        "ajp": "Section 2.2 - List manipulation patterns.ajp"
+    },
+    "sec2.2/reduce/reimplement-join": {
+        "json": "2.2.14.json",
+        "ajp": "Section 2.2 - List manipulation patterns.ajp"
+    },
+    "sec2.2/reduce/product": {
+        "json": "2.2.15.json",
+        "ajp": "Section 2.2 - List manipulation patterns.ajp"
+    },
+    "sec2.2/reduce/dot-product": {
+        "json": "2.2.16.json",
+        "ajp": "Section 2.2 - List manipulation patterns.ajp"
+    },
+    "sec2.2/index/fill-between-a-b": {
+        "json": "2.2.17.json",
+        "ajp": "Section 2.2 - List manipulation patterns.ajp"
+    },
+    "sec2.2/reduce/high-score-argmax": {
+        "json": "2.2.18.json",
+        "ajp": "Section 2.2 - List manipulation patterns.ajp"
+    },
+    "sec2.2/index/find-unique-number": {
+        "json": "2.2.19.json",
+        "ajp": "Section 2.2 - List manipulation patterns.ajp"
+    },
+    "sec2.2/reduce/min-nonzero": {
+        "json": "2.2.20.json",
+        "ajp": "Section 2.2 - List manipulation patterns.ajp"
+    },
+    "sec2.2/reduce/score-tally": {
+        "json": "2.2.21.json",
+        "ajp": "Section 2.2 - List manipulation patterns.ajp"
+    },
+    "sec2.2/reduce/lucky-sevens": {
+        "json": "2.2.22.json",
+        "ajp": "Section 2.2 - List manipulation patterns.ajp"
+    },
+    "sec2.2/index/count-stops": {
+        "json": "2.2.23.json",
+        "ajp": "Section 2.2 - List manipulation patterns.ajp"
+    },
+    "sec2.2/reduce/elementary-math": {
+        "json": "2.2.24.json",
+        "ajp": "Section 2.2 - List manipulation patterns.ajp"
+    },
+    "sec2.2/index/running-total-search": {
+        "json": "2.2.25.json",
+        "ajp": "Section 2.2 - List manipulation patterns.ajp"
+    },
+    "sec2.2/reduce/chemicals": {
+        "json": "2.2.26.json",
+        "ajp": "Section 2.2 - List manipulation patterns.ajp"
+    },
+    "sec2.2/problem-solving/caught-in-candy": {
+        "json": "2.2.27.json",
+        "ajp": "Section 2.2 - List manipulation patterns.ajp"
+    },
+    "sec2.2/problem-solving/good-as-gold": {
+        "json": "2.2.28.json",
+        "ajp": "Section 2.2 - List manipulation patterns.ajp"
+    },
+    "sec2.2/problem-solving/domino-chain": {
+        "json": "2.2.29.json",
+        "ajp": "Section 2.2 - List manipulation patterns.ajp"
+    },
+    "sec2.2/problem-solving/basketbology-easy-decision": {
+        "json": "2.2.30.json",
+        "ajp": "Section 2.2 - List manipulation patterns.ajp"
+    },
+    "sec2.3/repeat/scream-and-shout": {
+        "json": "2.3.1.json",
+        "ajp": "Section 2.3 - Simulation and enumeration, while loops.ajp"
+    },
+    "sec2.3/repeat/point-updates-int": {
+        "json": "2.3.2.json",
+        "ajp": "Section 2.3 - Simulation and enumeration, while loops.ajp"
+    },
+    "sec2.3/repeat/point-updates-ints": {
+        "json": "2.3.3.json",
+        "ajp": "Section 2.3 - Simulation and enumeration, while loops.ajp"
+    },
+    "sec2.3/repeat/point-updates-string": {
+        "json": "2.3.4.json",
+        "ajp": "Section 2.3 - Simulation and enumeration, while loops.ajp"
+    },
+    "sec2.3/repeat/perform-swaps": {
+        "json": "2.3.5.json",
+        "ajp": "Section 2.3 - Simulation and enumeration, while loops.ajp"
+    },
+    "sec2.3/flower-many/average": {
+        "json": "2.3.6.json",
+        "ajp": "Section 2.3 - Simulation and enumeration, while loops.ajp"
+    },
+    "sec2.3/flower-many/max": {
+        "json": "2.3.7.json",
+        "ajp": "Section 2.3 - Simulation and enumeration, while loops.ajp"
+    },
+    "sec2.3/flower-many/median": {
+        "json": "2.3.8.json",
+        "ajp": "Section 2.3 - Simulation and enumeration, while loops.ajp"
+    },
+    "sec2.3/flower-many/count-leq": {
+        "json": "2.3.9.json",
+        "ajp": "Section 2.3 - Simulation and enumeration, while loops.ajp"
+    },
+    "sec2.3/flower-many/increment": {
+        "json": "2.3.10.json",
+        "ajp": "Section 2.3 - Simulation and enumeration, while loops.ajp"
+    },
+    "sec2.3/flower-many/grow-all-to-max": {
+        "json": "2.3.11.json",
+        "ajp": "Section 2.3 - Simulation and enumeration, while loops.ajp"
+    },
+    "sec2.3/flower-many/grow-to-k": {
+        "json": "2.3.12.json",
+        "ajp": "Section 2.3 - Simulation and enumeration, while loops.ajp"
+    },
+    "sec2.3/flower-many/multi": {
+        "json": "2.3.13.json",
+        "ajp": "Section 2.3 - Simulation and enumeration, while loops.ajp"
+    },
+    "sec2.3/until/compound-interest": {
+        "json": "2.3.14.json",
+        "ajp": "Section 2.3 - Simulation and enumeration, while loops.ajp"
+    },
+    "sec2.3/count-degree-undirected": {
+        "json": "2.3.15.json",
+        "ajp": "Section 2.3 - Simulation and enumeration, while loops.ajp"
+    },
+    "sec2.3/count-degree-directed": {
+        "json": "2.3.16.json",
+        "ajp": "Section 2.3 - Simulation and enumeration, while loops.ajp"
+    },
+    "sec2.3/ballots": {
+        "json": "2.3.17.json",
+        "ajp": "Section 2.3 - Simulation and enumeration, while loops.ajp"
+    },
+    "sec2.3/until/fibonacci": {
+        "json": "2.3.18.json",
+        "ajp": "Section 2.3 - Simulation and enumeration, while loops.ajp"
+    },
+    "sec2.3/until/lcg": {
+        "json": "2.3.19.json",
+        "ajp": "Section 2.3 - Simulation and enumeration, while loops.ajp"
+    },
+    "sec2.3/wormholes": {
+        "json": "2.3.20.json",
+        "ajp": "Section 2.3 - Simulation and enumeration, while loops.ajp"
+    },
+    "sec2.3/information-tracker": {
+        "json": "2.3.21.json",
+        "ajp": "Section 2.3 - Simulation and enumeration, while loops.ajp"
+    },
+    "sec2.3/until/fibonacci-word": {
+        "json": "2.3.22.json",
+        "ajp": "Section 2.3 - Simulation and enumeration, while loops.ajp"
+    },
+    "sec2.3/auction": {
+        "json": "2.3.23.json",
+        "ajp": "Section 2.3 - Simulation and enumeration, while loops.ajp"
+    },
+    "sec2.3/good-noodle": {
+        "json": "2.3.24.json",
+        "ajp": "Section 2.3 - Simulation and enumeration, while loops.ajp"
+    },
+    "sec2.3/until/faro-math": {
+        "json": "2.3.25.json",
+        "ajp": "Section 2.3 - Simulation and enumeration, while loops.ajp"
+    },
+    "sec2.3/enumerate-all/enumerate-index-pairs": {
+        "json": "2.3.26.json",
+        "ajp": "Section 2.3 - Simulation and enumeration, while loops.ajp"
+    },
+    "sec2.3/enumerate-all/enumerate-lattice-points": {
+        "json": "2.3.27.json",
+        "ajp": "Section 2.3 - Simulation and enumeration, while loops.ajp"
+    },
+    "sec2.3/enumerate-all/count-lattice-points-intersection": {
+        "json": "2.3.28.json",
+        "ajp": "Section 2.3 - Simulation and enumeration, while loops.ajp"
+    },
+    "sec2.3/lamps/radius-0": {
+        "json": "2.3.29.json",
+        "ajp": "Section 2.3 - Simulation and enumeration, while loops.ajp"
+    },
+    "sec2.3/lamps/radius-1": {
+        "json": "2.3.30.json",
+        "ajp": "Section 2.3 - Simulation and enumeration, while loops.ajp"
+    },
+    "sec2.3/lamps/radius-d": {
+        "json": "2.3.31.json",
+        "ajp": "Section 2.3 - Simulation and enumeration, while loops.ajp"
+    }
+}

@@ -1,0 +1,156 @@
+4.A1: IOI 2013/1 (Dreaming)
+
+////////////////////////////// CORE IDEA //////////////////////////////
+let CC be a shorthand for connected component
+
+initially, the graph is composed of tree CC's. The goal is to add edges 
+such that the distance between any two points in the final connected 
+tree graph is minimized
+
+1. Consider an individual CC U in the initial graph. When connecting it 
+to other CC's, it is always optimal for the added edges to be connected 
+to vertex u, where u ∈ U
+
+this can be proven by contradiction. Say we connect two CC's U1 and U2
+in the graph to U through vertices u and v ≠ u, respectively, where 
+v ∈ U, and assume that such system is optimal
+observe that the maximum distance from travelling within each of U, U1, 
+and U2 is fixed, so we can ignore it for this proof
+the maximum distance from travelling between U and U1 or U and U2 
+depends on the position of u and v respectively, which is also 
+irrelevant to u and v being distinct, and hence our proof
+thus, we are left with travelling between U1 and U2. For any such path, 
+the distance d between u and v is clearly added. Since u ≠ v in the 
+current system, d > 0, but if u = v, d = 0, which is more optimal and, 
+hence, a contradiction, completing the proof
+
+2. Now, we need to find u such that the distance from it to any other 
+vertex in U (wlog) is minimized. Then, u must be in the diameter of U
+
+this can be proven by contradiction too. Say that u1, u2 ∈ U are the 
+endpoints of U's diameter, and assume that u is not in the diameter 
+of U 
+by the definition of a diameter, either the distance between u to u1 or 
+u to u2 is the maximum distance from u to any vertex in U. Wlog, let u 
+to u1 be said maximum distance path P
+now, let d be the minimum distance from u to any vertex in the diameter 
+of U in P. In the current system, d > 0, but if u is in the diameter of 
+U, d = 0, which is more optimal and, hence, a contradiction, completing 
+the proof
+
+3. With points 1 and 2, each CC Ui can be reduced to a single vertex ui 
+∈ Ui whose weight Wi is the minimum possible maximum distance from said 
+ui to all other vertices in Ui for 0 <= i < number of CC's in the 
+initial graph. It is always optimal to connect to all other CC's to the 
+CC with the maximum weight, forming a star-shaped graph
+
+This can be proven as follows: Redefine U0, U1, and U2 to be the CC's 
+with the largest weight in descending order. Then, by Pigeonhole 
+principle, traveling from at least one of the three possible pairs of 
+CC's must take at 2 new edges. We want to minimize the largest possible 
+distance of this 2-new-edge path, which means choosing U1 and U2, so 
+both must be directly connected to U0 through u0
+Having a path with more than 2 new edges will never be optimal since 
+for some leaf CC U in said path, it is always possible to find the 
+center CC of the current CC tree and connect U to that instead
+
+therefore, by finding the center ui of each CC Ui in linear time 
+through point 2, then connecting all the CC's together in the manner 
+prescribed by points 1 and 3 in linearithmic time (due to sorting), the 
+final answer is given by max(W0 + W1 + L, W1 + W2 + 2L, the maximum of 
+the diameters of each CC). Of course, the special cases of 1 or 2 
+initial CC's must be handled separately
+///////////////////////////////////////////////////////////////////////
+
+
+
+4.A2: CF 1281E (Jeremy Bearimy)
+
+////////////////////////////// CORE IDEA //////////////////////////////
+let L and R be the number of nodes to the left and right of an edge
+in the good case, an edge must be traversed if L and, by extension, R 
+are odd
+in the bad case, an edge is traversed min(L, R) times
+///////////////////////////////////////////////////////////////////////
+
+
+
+4.A3: CF 1987E (Wonderful Tree!)
+
+////////////////////////////// CORE IDEA //////////////////////////////
+let b be the difference between the sum of a's of some node u's 
+children and u's a, where b = infinity if u is a leaf
+our goal now is to let all b's be >= 0
+
+let node v be the parent of u. Observe that performing an operation on 
+u, that is to say increasing a_u by 1, decreases b_u by 1 and increases 
+b_v by 1, so operations can be propagated up the tree
+minimizing the number of operations now reduces to processing the nodes
+from greatest depth to least depth, taking from the current node's 
+nearest children by depth with positive b, which can be done in 
+quadratic time with bfs on bfs
+/////////////////////////////////////////////////////////////////////// 
+
+
+
+4.B1: IOI 2014/2 (Friend)
+
+////////////////////////////// CORE IDEA //////////////////////////////
+subtask 1: create the graph and use bitmasking to try all possible sets 
+of nodes
+subtask 2: the graph is completely disjoint, sum all confidence values
+subtask 3: the graph is complete, get the largest confidence value 
+among all nodes
+subtask 4: the graph is a tree, root it on any node then use dp to get 
+the maximum total confidence. The states are (if node is used, if node 
+is not used)
+subtask 5: the graph is bipartite. The problem boils down to maximum 
+independent sets, which is the complement of minimum vertex cover. In 
+bipartite graphs, the minimum vertex cover has the same size as the 
+maximum matching set (König's theorem), which can be found using a flow 
+algorithm like Ford-Fulkerson
+subtask 6: observe that the later nodes do not affect earlier nodes, so
+by going backwards, a node can be merged with its host through dp. The 
+states are the same as subtask 4, but with different conditions per 
+protocol type. We are guaranteed to get the answer at node 0, because 
+all nodes lead back to node 0
+///////////////////////////////////////////////////////////////////////
+
+
+
+4.B2: IOI 2012/2 (Parachute Rings)
+
+////////////////////////////// CORE IDEA //////////////////////////////
+a node is critical if after removing it, no other nodes are (1) in a 
+cycle and (2) have a degree >= 3
+observe that if a node u has degree >= 3, it must be one of the 
+critical nodes
+in particular, if u has a degree of exactly 3, it has at most three 
+neighboring nodes that are potentially critical nodes, since taking out
+u's neighbors reduces its degree to 2
+if u has a degree > 3, it must be the ONLY critical node, since no 
+other node can reduce its degree to <= 2
+
+we can use regular arrays to determine the degree of a node in 
+constant time by counting the number of edges connected to each node
+we can use dsu to determine if a cycle exists in logarithmic time
+let E be the maximum degree of all nodes in the current graph. For 
+E >= 3, since we just have at most 4 potential critical nodes, it 
+suffices to make a dsu for each one where said node is not in the graph
+overall, by carefully setting up conditions, each update takes 
+logarithmic time and each query takes constant time
+///////////////////////////////////////////////////////////////////////
+
+
+
+4.C1: IOI 2021/2 (Keys) 
+
+////////////////////////////// CORE IDEA //////////////////////////////
+///////////////////////////////////////////////////////////////////////
+
+
+
+4.C2: IOI 2022/6 (Thousand Islands)
+
+////////////////////////////// CORE IDEA //////////////////////////////
+///////////////////////////////////////////////////////////////////////

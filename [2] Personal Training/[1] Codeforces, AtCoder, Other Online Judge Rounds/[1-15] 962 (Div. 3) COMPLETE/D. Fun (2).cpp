@@ -1,0 +1,49 @@
+// 人外有人，天外有天
+// author: Ausp3x
+
+#pragma GCC optimize("O1, O2, O3, Ofast, unroll-loops")
+#include <bits/stdc++.h>
+#include <ext/pb_ds/assoc_container.hpp>
+using namespace std;
+using namespace __gnu_pbds;
+
+#define fi first
+#define se second
+#define pb push_back
+// #define DEBUG
+typedef long long    lng;
+
+int const INF32 = 0x3f3f3f3f;
+lng const INF64 = 0x3f3f3f3f3f3f3f3f;
+
+void solve() {
+    lng n, x;
+    cin >> n >> x;
+
+    lng ans = 0;
+    for (lng a = 1; a <= n; a++) 
+        for (lng b = 1; a * b <= n; b++) {
+            lng c = min(x - a - b, (n - a * b) / (a + b));
+            if (c < 1)
+                break;
+
+            ans += c;
+        }
+
+    cout << ans << endl;
+
+    return;
+}
+
+int main() {
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+
+    int t = 1;
+    cin >> t;
+    while (t--) {
+        solve();
+    }
+
+    return 0;
+}
