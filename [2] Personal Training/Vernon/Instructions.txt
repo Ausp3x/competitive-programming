@@ -1,0 +1,5 @@
+#1
+1. Warmup with https://atcoder.jp/contests/abc096
+2. Read Kleinberg and Tardos 7.1, 7.2, 7.3, 7.5, 7.6
+3. Read https://cp-algorithms.com/graph/edmonds_karp.html, mostly for the implementation example
+4. Solve the first four (vanilla) problems in https://progvar.fun/problemsets/admu-progvar-intermediate-2024-2025-1

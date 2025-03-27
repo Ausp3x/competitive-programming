@@ -93,7 +93,7 @@
         "stdfloat": "cpp",
         "cassert": "cpp"
     },
-    "editor.fontFamily": "'Fira Code'",
+    "editor.fontFamily": "'Jetbrains Mono'",
     "C_Cpp.default.compilerPath": "",
     "cph.general.timeOut": 10000
 }
